@@ -21,7 +21,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         historyTableView.delegate = self
         historyTableView.dataSource = self
-        historyTableView.frame = CGRect(x:screenWidth * 0/100, y:screenHeight * 10/100, width:screenWidth * 100/100, height:screenHeight * 80/100)
+        historyTableView.frame = CGRect(x:screenWidth * 0/100, y:screenHeight * 0/100, width:screenWidth, height:screenHeight * 2/3)
         historyTableView.register(UITableViewCell.self, forCellReuseIdentifier: "historyCell")
         self.view.addSubview(historyTableView)
     }
