@@ -7,20 +7,25 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.size.height
   //  let cellBackgroundColor = UIColor.named("cellBackgroundColor")
     
     var historyTableView: UITableView = UITableView()
+    let numberTextField = UITextField()
     
-    var historyArray: [Int] = [0123]
+    var historyArray: [Int] = [123]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.systemGray4
+        
+        let inputView = UIView()
+        inputView.frame = CGRect(x:screenWidth * 1/10, y:screenHeight * 9/20, width:screenWidth * 4/5, height:screenHeight * 1/10)
+        inputView.backgroundColor = UIColor.white
         
         historyTableView.delegate = self
         historyTableView.dataSource = self
@@ -32,9 +37,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         historyTableView.layer.shadowOpacity = 1
         historyTableView.layer.shadowRadius = 5
         historyTableView.layer.shadowOffset = CGSize(width: 4, height: 4)
-        historyTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        //historyTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        
+        inputView.layer.cornerRadius = 15
+        inputView.layer.shadowColor = UIColor.gray.cgColor
+        inputView.layer.shadowOpacity = 1
+        inputView.layer.shadowRadius = 5
+        inputView.layer.shadowOffset = CGSize(width: 4, height: 4)
+        
+        numberTextField.frame = CGRect(x:screenWidth * 15/100, y:screenHeight * 9/20, width:screenWidth * 3/5, height:screenHeight * 1/10)
+        numberTextField.placeholder = "数字3桁"
+        numberTextField.keyboardType = .numberPad
+        numberTextField.font = UIFont.systemFont(ofSize: 40)
+        numberTextField.layer.cornerRadius = 15
+        numberTextField.returnKeyType = .done
+        numberTextField.clearButtonMode = .never
+        numberTextField.delegate = self
         
         self.view.addSubview(historyTableView)
+        self.view.addSubview(inputView)
+        self.view.addSubview(numberTextField)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,6 +70,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.contentView.backgroundColor = UIColor.cellBackgroundColor
         
         return cell
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
 
