@@ -11,18 +11,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.size.height
+  //  let cellBackgroundColor = UIColor.named("cellBackgroundColor")
     
     var historyTableView: UITableView = UITableView()
     
-    var historyArray: [Int] = [0123, 4567, 8901]
+    var historyArray: [Int] = [0123]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor.systemGray4
+        
         historyTableView.delegate = self
         historyTableView.dataSource = self
-        historyTableView.frame = CGRect(x:screenWidth * 0/100, y:screenHeight * 0/100, width:screenWidth, height:screenHeight * 2/3)
+        historyTableView.frame = CGRect(x:screenWidth * 1/10, y:screenHeight * 1/10, width:screenWidth * 4/5, height:screenHeight * 3/10)
         historyTableView.register(UITableViewCell.self, forCellReuseIdentifier: "historyCell")
+        historyTableView.rowHeight = 60
+        historyTableView.layer.cornerRadius = 15
+        historyTableView.layer.shadowColor = UIColor.gray.cgColor
+        historyTableView.layer.shadowOpacity = 1
+        historyTableView.layer.shadowRadius = 5
+        historyTableView.layer.shadowOffset = CGSize(width: 4, height: 4)
+        historyTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        
         self.view.addSubview(historyTableView)
     }
     
@@ -31,11 +42,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "historyCell")
+        let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "historyCell")
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 40)
         cell.textLabel?.text = String(historyArray[indexPath.row])
-        cell.contentView.backgroundColor = UIColor.gray
+        cell.contentView.backgroundColor = UIColor.cellBackgroundColor
         
         return cell
     }
 }
 
+extension UIColor {
+    class var cellBackgroundColor: UIColor {
+        return UIColor(named: "CellBackgroundColor") ?? UIColor.white
+    }
+}
