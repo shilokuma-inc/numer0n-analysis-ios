@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var historyTableView: UITableView = UITableView()
     
-    var historyArray: [Int] = [0123]
+    var historyArray: [Int] = [123]
     
     override func viewDidLoad() {
         super.viewDidLoad()
