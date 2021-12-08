@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let screenWIdth = UIScreen.main.bounds.width
+    let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.size.height
     
     var sampleTableView: UITableView = UITableView()
