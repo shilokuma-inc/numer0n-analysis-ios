@@ -12,11 +12,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.size.height
     
-    var sampleTableView: UITableView = UITableView()
+    var historyTableView: UITableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sampleTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        historyTableView.register(UITableViewCell.self, forCellReuseIdentifier: "historyCell")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -24,7 +24,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
+        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "historyCell")
         return cell
     }
 }
