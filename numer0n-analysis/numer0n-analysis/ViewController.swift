@@ -33,6 +33,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "historyCell")
         cell.textLabel?.text = String(historyArray[indexPath.row])
+        cell.contentView.backgroundColor = UIColor.gray
+        
         return cell
     }
 }
