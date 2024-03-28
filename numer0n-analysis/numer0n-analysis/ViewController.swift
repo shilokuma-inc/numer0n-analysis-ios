@@ -44,16 +44,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         inputView.layer.shadowOpacity = 1
         inputView.layer.shadowRadius = 5
         inputView.layer.shadowOffset = CGSize(width: 4, height: 4)
-        
-        numberTextField.frame = CGRect(x:screenWidth * 15/100, y:screenHeight * 9/20, width:screenWidth * 3/5, height:screenHeight * 1/10)
-        numberTextField.placeholder = "数字3桁"
-        numberTextField.keyboardType = .numberPad
-        numberTextField.font = UIFont.systemFont(ofSize: 40)
-        numberTextField.layer.cornerRadius = 15
-        numberTextField.returnKeyType = .done
-        numberTextField.clearButtonMode = .never
-        numberTextField.delegate = self
-        
+
+		setUpNumberTextField(textField: numberTextField)
+
         self.view.addSubview(historyTableView)
         self.view.addSubview(inputView)
         self.view.addSubview(numberTextField)
@@ -81,4 +74,17 @@ extension UIColor {
     class var cellBackgroundColor: UIColor {
         return UIColor(named: "CellBackgroundColor") ?? UIColor.white
     }
+}
+
+extension ViewController {
+	private func setUpNumberTextField(textField: UITextField) {
+		textField.frame = CGRect(x:screenWidth * 15/100, y:screenHeight * 9/20, width:screenWidth * 3/5, height:screenHeight * 1/10)
+		textField.placeholder = "数字3桁"
+		textField.keyboardType = .numberPad
+		textField.font = UIFont.systemFont(ofSize: 40)
+		textField.layer.cornerRadius = 15
+		textField.returnKeyType = .done
+		textField.clearButtonMode = .never
+		textField.delegate = self
+	}
 }
