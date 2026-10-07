@@ -54,7 +54,7 @@ enum BestMove {
     /// 並びは「エントロピーの降順 → 残り候補の中にある手を優先 → 数字の昇順」。
     /// - Parameters:
     ///   - candidates: 残り候補。0 件なら空を、1 件ならその数字だけを返す。
-    ///   - guesses: 評価する手。省略するとルールで許されるすべての数字。
+    ///   - guesses: 評価する手。省略するとルールで許されるすべての数字。空なら空を返す。桁数はルールと同じであること。
     static func rankedMoves(
         rule: Rule,
         candidates: [Numer0nNumber],
@@ -67,11 +67,16 @@ enum BestMove {
             return [evaluate(guess: candidates[0], candidates: candidates, isCandidate: true)]
         }
         let guesses = guesses ?? rule.allNumbers()
+        if guesses.isEmpty {
+            return []
+        }
+        precondition(guesses.allSatisfy { $0.length == rule.length }, "打てる手の桁数がルールと違う")
         let candidateSet = Set(candidates)
 
         let evaluations: [MoveEvaluation]
         if candidates.count == rule.numberCount {
             // 初手（候補 = 全数字）は対称性でどの手も同じ評価になるので、1 手だけ計算して使い回す。
+            // 数字の置換と桁の入れ替えで任意の手どうしが移り合うため、`guesses` が全数字の一部でも成り立つ。
             let first = evaluate(guess: guesses[0], candidates: candidates, isCandidate: true)
             evaluations = guesses.map { guess in
                 MoveEvaluation(

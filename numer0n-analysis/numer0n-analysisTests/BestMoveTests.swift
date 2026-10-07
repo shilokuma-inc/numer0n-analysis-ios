@@ -97,6 +97,27 @@ final class BestMoveTests: XCTestCase {
         XCTAssertEqual(BestMove.rankedMoves(rule: three, candidates: three.allNumbers())[0].worstCaseRemaining, 252)
     }
 
+    func testEmptyGuessesGiveNoMoves() throws {
+        let candidates = try numbers(["012", "013", "014"], rule: three)
+        XCTAssertEqual(BestMove.rankedMoves(rule: three, candidates: candidates, guesses: []), [])
+        // 初手の省略計算の分岐でも落ちない
+        XCTAssertEqual(BestMove.rankedMoves(rule: three, candidates: three.allNumbers(), guesses: []), [])
+    }
+
+    /// 初手で打てる手を一部に絞っても、各手を個別に評価した結果と一致する。
+    func testFirstMoveShortcutWithSubsetOfGuesses() throws {
+        let all = three.allNumbers()
+        let guesses = try numbers(["987", "012", "504"], rule: three)
+        let moves = BestMove.rankedMoves(rule: three, candidates: all, guesses: guesses)
+        XCTAssertEqual(moves.map(\.guess.description), ["012", "504", "987"])
+        for move in moves {
+            let full = BestMove.evaluate(guess: move.guess, candidates: all, isCandidate: true)
+            XCTAssertEqual(move.entropy, full.entropy, accuracy: 1e-12)
+            XCTAssertEqual(move.worstCaseRemaining, full.worstCaseRemaining)
+            XCTAssertEqual(move.expectedRemaining, full.expectedRemaining, accuracy: 1e-9)
+        }
+    }
+
     func testCustomGuesses() throws {
         let candidates = try numbers(["012", "013", "014"], rule: three)
         let guesses = try numbers(["012", "023"], rule: three)
