@@ -39,6 +39,10 @@ struct DeductionView: View {
                 }
             } else {
                 inputSection
+
+                BestMoveSection(deduction: deduction) { guess in
+                    input.text = guess.description
+                }
             }
 
             historySection

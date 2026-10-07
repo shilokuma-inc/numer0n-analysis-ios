@@ -34,6 +34,7 @@
 		F0A1C0DE0000000000000083 /* DeductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000084 /* DeductionView.swift */; };
 		F0A1C0DE0000000000000085 /* CallInputTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000086 /* CallInputTests.swift */; };
 		F0A1C0DE0000000000000091 /* CandidateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000092 /* CandidateListView.swift */; };
+		F0A1C0DE00000000000000A1 /* BestMoveSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE00000000000000A2 /* BestMoveSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		F0A1C0DE0000000000000084 /* DeductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeductionView.swift; sourceTree = "<group>"; };
 		F0A1C0DE0000000000000086 /* CallInputTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallInputTests.swift; sourceTree = "<group>"; };
 		F0A1C0DE0000000000000092 /* CandidateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateListView.swift; sourceTree = "<group>"; };
+		F0A1C0DE00000000000000A2 /* BestMoveSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestMoveSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				F0A1C0DE0000000000000074 /* GameView.swift */,
 				F0A1C0DE0000000000000084 /* DeductionView.swift */,
 				F0A1C0DE0000000000000092 /* CandidateListView.swift */,
+				F0A1C0DE00000000000000A2 /* BestMoveSection.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				F0A1C0DE0000000000000081 /* CallInput.swift in Sources */,
 				F0A1C0DE0000000000000083 /* DeductionView.swift in Sources */,
 				F0A1C0DE0000000000000091 /* CandidateListView.swift in Sources */,
+				F0A1C0DE00000000000000A1 /* BestMoveSection.swift in Sources */,
 				F0A1C0DE0000000000000011 /* Rule.swift in Sources */,
 				F0A1C0DE0000000000000041 /* BestMove.swift in Sources */,
 				F0A1C0DE0000000000000061 /* BestMoveSearch.swift in Sources */,
