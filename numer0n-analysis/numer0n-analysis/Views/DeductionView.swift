@@ -8,9 +8,41 @@ import SwiftUI
 /// 推理の画面。コールと回答を入力して履歴に足し、履歴と残り候補数を表示する。
 struct DeductionView: View {
     let deduction: Deduction
-    let description: String
-    /// 入力欄の見出し（例: 「自分のコール」）。
-    let inputTitle: String
+    let role: Role
+
+    /// どちらの推理か。文言と、最善手を出すかが変わる。
+    enum Role {
+        /// 自分の推理: 自分のコールと相手の回答から、相手の数字を当てる。
+        case mine
+        /// 相手の推理: 相手のコールと自分の回答から、相手から見た自分の数字の候補を出す。
+        case opponent
+
+        var description: String {
+            switch self {
+            case .mine: "自分のコールと相手の回答から、相手の数字の候補を出します。"
+            case .opponent: "相手のコールと自分の回答から、相手から見た自分の数字の候補を出します。相手がどこまで絞れているかの目安になります。"
+            }
+        }
+
+        var inputTitle: String {
+            switch self {
+            case .mine: "自分のコールと相手の回答"
+            case .opponent: "相手のコールと自分の回答"
+            }
+        }
+
+        func solvedMessage(length: Int) -> String {
+            switch self {
+            case .mine: "当たりました（\(length)EAT）"
+            case .opponent: "相手に当てられました（\(length)EAT）"
+            }
+        }
+
+        /// 最善手は自分がコールするときにだけ使う。
+        var showsBestMove: Bool {
+            self == .mine
+        }
+    }
 
     @State private var input = CallInput()
     @FocusState private var isNumberFieldFocused: Bool
@@ -26,12 +58,12 @@ struct DeductionView: View {
             Section {
                 LabeledContent("残り候補", value: "\(deduction.candidateCount.formatted()) 通り")
             } footer: {
-                Text(description)
+                Text(role.description)
             }
 
             if deduction.isSolved {
                 Section {
-                    Label("当たりました（\(rule.length)EAT）", systemImage: "checkmark.seal.fill")
+                    Label(role.solvedMessage(length: rule.length), systemImage: "checkmark.seal.fill")
                         .foregroundStyle(.green)
                         .font(.headline)
                 } footer: {
@@ -40,8 +72,10 @@ struct DeductionView: View {
             } else {
                 inputSection
 
-                BestMoveSection(deduction: deduction) { guess in
-                    input.text = guess.description
+                if role.showsBestMove {
+                    BestMoveSection(deduction: deduction) { guess in
+                        input.text = guess.description
+                    }
                 }
             }
 
@@ -67,7 +101,7 @@ struct DeductionView: View {
             Button("履歴に追加", action: add)
                 .disabled(!canAdd)
         } header: {
-            Text(inputTitle)
+            Text(role.inputTitle)
         }
     }
 
@@ -139,9 +173,7 @@ struct HistoryRow: View {
 }
 
 #Preview {
-    DeductionView(
-        deduction: Deduction(rule: Rule(digitCount: .three)),
-        description: "自分のコールと相手の回答から、相手の数字の候補を出します。",
-        inputTitle: "自分のコールと相手の回答"
-    )
+    NavigationStack {
+        DeductionView(deduction: Deduction(rule: Rule(digitCount: .three)), role: .mine)
+    }
 }
