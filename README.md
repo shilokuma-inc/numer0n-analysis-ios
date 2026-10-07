@@ -6,14 +6,17 @@ numer0n-analysis-ios
 選択と相手の回答から可能性のパターンを提示する
 最善手を提示する機能も作成予定
 
-## 仕様技術
-- UIKit
+## 使用技術
+- SwiftUI（`@main` の `App` から起動。Storyboard は使わない）
+- Observation（`@Observable` で状態を管理）
+- XCTest（判定・候補の絞り込み・最善手のロジックを単体テスト）
+- 最低 iOS 17.0。アプリは外部ライブラリ・サーバーを使わない（オフラインで完結。SwiftLint はビルド時だけ使う）
 
 ## Environment
 
 - Xcode 26.3（CI で固定）
-- iOS 15.0 以上
-- UIKit（Storyboard）/ XCTest
+- iOS 17.0 以上
+- SwiftUI（Observation）/ XCTest
 - SwiftLint 0.65.1（Build Tool Plugin。バイナリだけを配布する [SwiftLintPlugins](https://github.com/SimplyDanny/SwiftLintPlugins) 経由）
 
 ## Status
@@ -81,7 +84,7 @@ xcodebuild test -project Numer0nLens.xcodeproj -scheme Numer0nLens -destination 
 | `APP_BUNDLE_IDENTIFIER` | アプリ本体の Bundle Identifier（`jp.shilokuma.Numer0nLens`）。テストターゲットは `.Tests` / `.UITests` を付けて派生します |
 | `APP_DISPLAY_NAME` | ホーム画面に表示するアプリ名 |
 | `MARKETING_VERSION` | アプリのバージョン。ビルド番号（`CURRENT_PROJECT_VERSION`）は Upload のときに App Store Connect の最新ビルドを見て Xcode が自動で増やすため、手で上げる必要はありません |
-| `IPHONEOS_DEPLOYMENT_TARGET` | 最低サポート OS（15.0） |
+| `IPHONEOS_DEPLOYMENT_TARGET` | 最低サポート OS（17.0） |
 
 ## CI（GitHub Actions）
 
@@ -127,7 +130,7 @@ Archive / Upload は App Store Connect API Key で認証します。以下はリ
 ```
 .
 ├── Configs/                 # xcconfig（署名情報・バージョン・Deployment Target）
-├── Numer0nLens/             # アプリ本体（UIKit / Storyboard）
+├── Numer0nLens/             # アプリ本体（SwiftUI。Logic/・Model/・Views/）
 ├── Numer0nLensTests/        # Unit テスト（XCTest）
 ├── Numer0nLensUITests/      # UI テスト（XCTest）
 ├── Numer0nLens.xcodeproj    # 共有スキーム Numer0nLens を含む

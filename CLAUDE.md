@@ -9,14 +9,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 | リポジトリ | `shilokuma-inc/numer0n-analysis-ios`（public） |
 | デフォルトブランチ | `develop` |
 | 概要 | ヌメロン解析アプリ。選択と相手の回答から可能性のパターンを提示する（最善手の提示も予定） |
-| UI フレームワーク | UIKit（Storyboard） |
-| Deployment Target | iOS 15.0 |
+| UI フレームワーク | SwiftUI（`@Observable`） |
+| Deployment Target | iOS 17.0 |
 | Bundle ID | `jp.shilokuma.Numer0nLens`（署名・バージョンなどのビルド設定は `Configs/*.xcconfig`） |
 
 ## 構成
 
 - `Numer0nLens.xcodeproj` … Xcode プロジェクト（リポジトリ直下）
-- `Numer0nLens/` … アプリ本体（`ViewController.swift`・`Main.storyboard` など）
+- `Numer0nLens/` … アプリ本体。`Logic/`（ルール・判定・候補の絞り込み・最善手。SwiftUI に依存しない）・`Model/`（`@Observable` の状態）・`Views/`（SwiftUI の画面）・`Numer0nAnalysisApp.swift`（`@main`）
 - `Numer0nLensTests/`・`Numer0nLensUITests/` … テスト
 - 共有スキーム `Numer0nLens`（Test アクションに Unit テストと UI テストの両方を含む）。CI のワークフローは「リポジトリ直下の `*.xcodeproj` と同名の共有スキーム」を前提にしている
 - `Configs/*.xcconfig` … 署名情報・Bundle ID・バージョン・Deployment Target（pbxproj には値を直接書かない）
