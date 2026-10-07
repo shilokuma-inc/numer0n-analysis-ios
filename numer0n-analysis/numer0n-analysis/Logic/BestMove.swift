@@ -19,19 +19,55 @@ struct MoveEvaluation: Hashable, Sendable {
     let expectedRemaining: Double
 }
 
+/// 判定を速くするための、数字のビット表現。最善手の計算では判定を数千万回行うため、配列を比べずにビット演算で数える。
+struct PackedNumber: Hashable, Sendable {
+    /// 桁と数字の組（`1 << (桁 * 10 + 数字)`）。EAT を数えるのに使う。
+    let positions: UInt64
+    /// 使っている数字（`1 << 数字`）。共通する数字を数えるのに使う。
+    let digitSet: UInt16
+
+    init(_ number: Numer0nNumber) {
+        var positions: UInt64 = 0
+        var digitSet: UInt16 = 0
+        for (index, digit) in number.digits.enumerated() {
+            positions |= 1 << UInt64(index * 10 + digit)
+            digitSet |= 1 << UInt16(digit)
+        }
+        self.positions = positions
+        self.digitSet = digitSet
+    }
+
+    /// `judge(guess:answer:)` と同じ結果を返す。桁数が同じ前提。
+    func judge(answer: PackedNumber) -> (eat: Int, bite: Int) {
+        let eat = (positions & answer.positions).nonzeroBitCount
+        let common = (digitSet & answer.digitSet).nonzeroBitCount
+        return (eat, common - eat)
+    }
+}
+
 enum BestMove {
     /// エントロピーを同点とみなす幅。浮動小数点の誤差で並びが揺れないようにする。
     static let entropyTolerance = 1e-9
 
     /// 手 `guess` を、残り候補 `candidates` に対して評価する。
     static func evaluate(guess: Numer0nNumber, candidates: [Numer0nNumber], isCandidate: Bool) -> MoveEvaluation {
+        evaluate(guess: guess, packedCandidates: candidates.map(PackedNumber.init), isCandidate: isCandidate)
+    }
+
+    /// 手 `guess` を、ビット表現にした残り候補に対して評価する。手ごとに候補を変換し直さないための版。
+    static func evaluate(guess: Numer0nNumber, packedCandidates: [PackedNumber], isCandidate: Bool) -> MoveEvaluation {
         let length = guess.length
+        let packedGuess = PackedNumber(guess)
         var counts = [Int](repeating: 0, count: (length + 1) * (length + 1))
-        for candidate in candidates {
-            let result = judge(guess: guess, answer: candidate)
-            counts[result.eat * (length + 1) + result.bite] += 1
+        counts.withUnsafeMutableBufferPointer { counts in
+            packedCandidates.withUnsafeBufferPointer { candidates in
+                for candidate in candidates {
+                    let (eat, bite) = packedGuess.judge(answer: candidate)
+                    counts[eat * (length + 1) + bite] += 1
+                }
+            }
         }
-        let total = Double(candidates.count)
+        let total = Double(packedCandidates.count)
         var entropy = 0.0
         var sumOfSquares = 0
         var worst = 0
@@ -88,8 +124,9 @@ enum BestMove {
                 )
             }
         } else {
+            let packedCandidates = candidates.map(PackedNumber.init)
             evaluations = guesses.map { guess in
-                evaluate(guess: guess, candidates: candidates, isCandidate: candidateSet.contains(guess))
+                evaluate(guess: guess, packedCandidates: packedCandidates, isCandidate: candidateSet.contains(guess))
             }
         }
         return evaluations.sorted(by: isBetter)

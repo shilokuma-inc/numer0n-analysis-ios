@@ -14,6 +14,24 @@ final class BestMoveTests: XCTestCase {
         try texts.map { try Numer0nNumber($0, rule: rule) }
     }
 
+    /// ビット表現での判定は、すべての組で judge と一致する（3 桁は全組、4・5 桁は間引いた組）。
+    func testPackedJudgeMatchesJudge() {
+        for rule in [three, four, Rule(digitCount: .five)] {
+            let numbers = rule.allNumbers()
+            let step = max(1, numbers.count / 720)
+            let sampled = stride(from: 0, to: numbers.count, by: step).map { numbers[$0] }
+            let packed = sampled.map(PackedNumber.init)
+            for (guess, packedGuess) in zip(sampled, packed) {
+                for (answer, packedAnswer) in zip(sampled, packed) {
+                    let expected = judge(guess: guess, answer: answer)
+                    let actual = packedGuess.judge(answer: packedAnswer)
+                    XCTAssertEqual(actual.eat, expected.eat)
+                    XCTAssertEqual(actual.bite, expected.bite)
+                }
+            }
+        }
+    }
+
     func testNoCandidatesGivesNoMoves() {
         XCTAssertEqual(BestMove.rankedMoves(rule: three, candidates: []), [])
     }
