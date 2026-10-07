@@ -17,7 +17,7 @@
 		E16164B9275FC679005A8615 /* numer0n_analysisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16164B8275FC679005A8615 /* numer0n_analysisUITests.swift */; };
 		E16164BB275FC679005A8615 /* numer0n_analysisUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16164BA275FC679005A8615 /* numer0n_analysisUITestsLaunchTests.swift */; };
 		F0A1C0DE0000000000000011 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000012 /* Rule.swift */; };
-		F0A1C0DE0000000000000013 /* NumberCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000014 /* NumberCode.swift */; };
+		F0A1C0DE0000000000000013 /* Numer0nNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000014 /* Numer0nNumber.swift */; };
 		F0A1C0DE0000000000000015 /* RuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000016 /* RuleTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +53,7 @@
 		E16164B8275FC679005A8615 /* numer0n_analysisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numer0n_analysisUITests.swift; sourceTree = "<group>"; };
 		E16164BA275FC679005A8615 /* numer0n_analysisUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numer0n_analysisUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F0A1C0DE0000000000000012 /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
-		F0A1C0DE0000000000000014 /* NumberCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCode.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000014 /* Numer0nNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numer0nNumber.swift; sourceTree = "<group>"; };
 		F0A1C0DE0000000000000016 /* RuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,7 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				F0A1C0DE0000000000000012 /* Rule.swift */,
-				F0A1C0DE0000000000000014 /* NumberCode.swift */,
+				F0A1C0DE0000000000000014 /* Numer0nNumber.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -279,7 +279,7 @@
 				E1616498275FC677005A8615 /* AppDelegate.swift in Sources */,
 				E161649A275FC677005A8615 /* SceneDelegate.swift in Sources */,
 				F0A1C0DE0000000000000011 /* Rule.swift in Sources */,
-				F0A1C0DE0000000000000013 /* NumberCode.swift in Sources */,
+				F0A1C0DE0000000000000013 /* Numer0nNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

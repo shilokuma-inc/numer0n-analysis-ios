@@ -27,8 +27,8 @@ struct Rule: Hashable, Sendable {
     }
 
     /// ルールで許されるすべての数字を、昇順（"012" が先頭）で返す。
-    func allNumbers() -> [NumberCode] {
-        var result: [NumberCode] = []
+    func allNumbers() -> [Numer0nNumber] {
+        var result: [Numer0nNumber] = []
         result.reserveCapacity(numberCount)
         var digits: [Int] = []
         digits.reserveCapacity(length)
@@ -36,7 +36,7 @@ struct Rule: Hashable, Sendable {
 
         func fill() {
             if digits.count == length {
-                result.append(NumberCode(uncheckedDigits: digits))
+                result.append(Numer0nNumber(uncheckedDigits: digits))
                 return
             }
             for digit in Rule.allowedDigits where !used.contains(digit) {
