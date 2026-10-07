@@ -41,6 +41,15 @@ final class EatBiteValidationTests: XCTestCase {
         }
     }
 
+    func testRejectsHugeValuesWithoutOverflow() {
+        XCTAssertThrowsError(try EatBite(eat: Int.max, bite: 1, rule: three)) { error in
+            XCTAssertEqual(error as? EatBiteError, .exceedsLength(length: 3))
+        }
+        XCTAssertThrowsError(try EatBite(eat: 1, bite: Int.max, rule: three)) { error in
+            XCTAssertEqual(error as? EatBiteError, .exceedsLength(length: 3))
+        }
+    }
+
     func testRejectsImpossibleCombination() {
         XCTAssertThrowsError(try EatBite(eat: 2, bite: 1, rule: three)) { error in
             XCTAssertEqual(error as? EatBiteError, .impossibleCombination)
@@ -122,6 +131,12 @@ final class CandidateFilterTests: XCTestCase {
     func testContradictoryHistoryGivesNoCandidates() throws {
         let history = [try call("123", 3, 0, rule: three), try call("456", 1, 0, rule: three)]
         XCTAssertEqual(three.candidates(matching: history), [])
+    }
+
+    func testEntryWithDifferentLengthIsInconsistent() throws {
+        let threeDigitCall = try call("123", 0, 0, rule: three)
+        XCTAssertFalse(threeDigitCall.isConsistent(with: try Numer0nNumber("4567", rule: four)))
+        XCTAssertEqual(four.candidates(matching: [threeDigitCall]), [])
     }
 
     func testIncrementalNarrowingMatchesBatch() throws {

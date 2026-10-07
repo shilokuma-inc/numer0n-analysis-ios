@@ -19,7 +19,8 @@ extension EatBite {
         guard eat >= 0, bite >= 0 else {
             throw EatBiteError.negative
         }
-        guard eat + bite <= rule.length else {
+        // 加算でオーバーフローしないよう、EAT を先に確かめてから残りの桁で BITE を確かめる。
+        guard eat <= rule.length, bite <= rule.length - eat else {
             throw EatBiteError.exceedsLength(length: rule.length)
         }
         // 1 桁だけ位置が違えば、その数字は他のどの桁とも一致しない。
@@ -45,6 +46,10 @@ enum HistoryEntry: Hashable, Sendable {
     func isConsistent(with candidate: Numer0nNumber) -> Bool {
         switch self {
         case let .call(guess, result):
+            // 桁数の違う候補とは比べられないので、矛盾として扱う。
+            guard guess.length == candidate.length else {
+                return false
+            }
             return judge(guess: guess, answer: candidate) == result
         }
     }
