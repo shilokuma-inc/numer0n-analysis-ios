@@ -1,13 +1,13 @@
 //
-//  numer0n_analysisUITestsLaunchTests.swift
-//  numer0n-analysisUITests
+//  Numer0nLensUITestsLaunchTests.swift
+//  Numer0nLensUITests
 //
 //  Created by 村石拓海 on 2021/12/08.
 //
 
 import XCTest
 
-class numer0n_analysisUITestsLaunchTests: XCTestCase {
+class Numer0nLensUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

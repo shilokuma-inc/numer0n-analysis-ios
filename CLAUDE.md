@@ -15,17 +15,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 構成
 
-- `numer0n-analysis/numer0n-analysis.xcodeproj` … Xcode プロジェクト（リポジトリ直下ではなく `numer0n-analysis/` の下にある）
-- `numer0n-analysis/numer0n-analysis/` … アプリ本体（`ViewController.swift`・`Main.storyboard` など）
-- `numer0n-analysis/numer0n-analysisTests/`・`numer0n-analysisUITests/` … テスト
-- 共有の scheme は無い（xcodebuild が自動で作る `numer0n-analysis` を使う）。CI（GitHub Actions）はまだ無い
+- `Numer0nLens.xcodeproj` … Xcode プロジェクト（リポジトリ直下）
+- `Numer0nLens/` … アプリ本体（`ViewController.swift`・`Main.storyboard` など）
+- `Numer0nLensTests/`・`Numer0nLensUITests/` … テスト
+- 共有スキーム `Numer0nLens`（Test アクションに Unit テストと UI テストの両方を含む）。CI（GitHub Actions）はまだ無い
 
 ## ビルド・検証
 
 ```bash
-cd numer0n-analysis
-xcodebuild -project numer0n-analysis.xcodeproj -scheme numer0n-analysis -destination 'platform=iOS Simulator,name=iPhone 17 Pro' build
-xcodebuild test -project numer0n-analysis.xcodeproj -scheme numer0n-analysis -destination 'platform=iOS Simulator,name=iPhone 17 Pro' -only-testing:numer0n-analysisTests -parallel-testing-enabled NO
+xcodebuild -project Numer0nLens.xcodeproj -scheme Numer0nLens -destination 'platform=iOS Simulator,name=iPhone 17 Pro' build
+xcodebuild test -project Numer0nLens.xcodeproj -scheme Numer0nLens -destination 'platform=iOS Simulator,name=iPhone 17 Pro' -only-testing:Numer0nLensTests -parallel-testing-enabled NO
 ```
 
 - Simulator 名は OS 更新で改名されることがある。解決できない場合は `xcrun simctl list devices available` で UDID を調べて `id=` で指定する

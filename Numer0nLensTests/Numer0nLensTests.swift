@@ -1,14 +1,14 @@
 //
-//  numer0n_analysisTests.swift
-//  numer0n-analysisTests
+//  Numer0nLensTests.swift
+//  Numer0nLensTests
 //
 //  Created by 村石拓海 on 2021/12/08.
 //
 
 import XCTest
-@testable import numer0n_analysis
+@testable import Numer0nLens
 
-class numer0n_analysisTests: XCTestCase {
+class Numer0nLensTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
