@@ -38,10 +38,13 @@ struct GameView: View {
 
             switch side {
             case .mine:
-                DeductionSummaryView(
+                DeductionView(
                     deduction: game.myDeduction,
-                    description: "自分のコールと相手の回答から、相手の数字の候補を出します。"
+                    description: "自分のコールと相手の回答から、相手の数字の候補を出します。",
+                    inputTitle: "自分のコールと相手の回答"
                 )
+                // やり直したら入力欄も空に戻す。
+                .id(ObjectIdentifier(game.myDeduction))
             case .opponent:
                 DeductionSummaryView(
                     deduction: game.opponentDeduction,
