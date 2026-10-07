@@ -61,6 +61,8 @@ struct DeductionView: View {
                 Text(role.description)
             }
 
+            contradictionSection
+
             if deduction.isSolved {
                 Section {
                     Label(role.solvedMessage(length: rule.length), systemImage: "checkmark.seal.fill")
@@ -124,11 +126,28 @@ struct DeductionView: View {
                     .foregroundStyle(.secondary)
             } else {
                 ForEach(Array(deduction.history.enumerated()), id: \.offset) { index, entry in
-                    HistoryRow(number: index + 1, entry: entry)
+                    HistoryRow(number: index + 1, entry: entry, isContradiction: index == deduction.contradictionIndex)
+                }
+                Button("最後の履歴を取り消す", role: .destructive) {
+                    deduction.undoLast()
                 }
             }
         } header: {
             Text("履歴")
+        }
+    }
+
+    /// 候補が 0 件になったときの知らせ。どの入力で矛盾したかを示す。
+    @ViewBuilder
+    private var contradictionSection: some View {
+        if let index = deduction.contradictionIndex {
+            Section {
+                Label("候補が 0 通りになりました", systemImage: "exclamationmark.triangle.fill")
+                    .foregroundStyle(.red)
+                    .font(.headline)
+            } footer: {
+                Text("履歴の \(index + 1) 件目の入力が、それより前の入力と矛盾しています。コールか回答の入れ間違いがないか確かめ、最後の履歴から取り消してください。")
+            }
         }
     }
 
@@ -153,6 +172,8 @@ struct DeductionView: View {
 struct HistoryRow: View {
     let number: Int
     let entry: HistoryEntry
+    /// この入力で候補が 0 件になったか。
+    var isContradiction = false
 
     var body: some View {
         switch entry {
@@ -166,6 +187,11 @@ struct HistoryRow: View {
                 Spacer()
                 Text(result.description)
                     .monospacedDigit()
+                if isContradiction {
+                    Image(systemName: "exclamationmark.triangle.fill")
+                        .foregroundStyle(.red)
+                        .accessibilityLabel("この入力で候補が 0 通りになりました")
+                }
             }
             .accessibilityElement(children: .combine)
         }

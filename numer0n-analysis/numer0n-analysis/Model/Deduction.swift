@@ -13,6 +13,8 @@ final class Deduction {
     private(set) var history: [HistoryEntry] = []
     /// 履歴と矛盾しない候補（昇順）。
     private(set) var candidates: [Numer0nNumber]
+    /// 候補が 0 件になった最初の履歴の位置（その入力が前の入力と矛盾している）。矛盾が無ければ `nil`。
+    private(set) var contradictionIndex: Int?
 
     init(rule: Rule) {
         self.rule = rule
@@ -40,6 +42,19 @@ final class Deduction {
         }
         history.append(entry)
         candidates = candidates.narrowed(by: entry)
+        if candidates.isEmpty, contradictionIndex == nil {
+            contradictionIndex = history.count - 1
+        }
+    }
+
+    /// 最後の履歴を 1 件取り消し、残りの履歴から候補を計算し直す。履歴が無ければ何もしない。
+    func undoLast() {
+        guard !history.isEmpty else {
+            return
+        }
+        history.removeLast()
+        candidates = rule.candidates(matching: history)
+        contradictionIndex = rule.firstContradictionIndex(in: history)
     }
 
     /// コールと回答を 1 件足す。
