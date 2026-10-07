@@ -13,9 +13,9 @@
 		E161649F275FC677005A8615 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E161649D275FC677005A8615 /* Main.storyboard */; };
 		E16164A1275FC679005A8615 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E16164A0275FC679005A8615 /* Assets.xcassets */; };
 		E16164A4275FC679005A8615 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E16164A2275FC679005A8615 /* LaunchScreen.storyboard */; };
-		E16164AF275FC679005A8615 /* numer0n_analysisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16164AE275FC679005A8615 /* numer0n_analysisTests.swift */; };
-		E16164B9275FC679005A8615 /* numer0n_analysisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16164B8275FC679005A8615 /* numer0n_analysisUITests.swift */; };
-		E16164BB275FC679005A8615 /* numer0n_analysisUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16164BA275FC679005A8615 /* numer0n_analysisUITestsLaunchTests.swift */; };
+		E16164AF275FC679005A8615 /* Numer0n_lens_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16164AE275FC679005A8615 /* Numer0n_lens_iosTests.swift */; };
+		E16164B9275FC679005A8615 /* Numer0n_lens_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16164B8275FC679005A8615 /* Numer0n_lens_iosUITests.swift */; };
+		E16164BB275FC679005A8615 /* Numer0n_lens_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16164BA275FC679005A8615 /* Numer0n_lens_iosUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,19 +24,19 @@
 			containerPortal = E161648C275FC677005A8615 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E1616493275FC677005A8615;
-			remoteInfo = "numer0n-analysis";
+			remoteInfo = "Numer0n-lens-ios";
 		};
 		E16164B5275FC679005A8615 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E161648C275FC677005A8615 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E1616493275FC677005A8615;
-			remoteInfo = "numer0n-analysis";
+			remoteInfo = "Numer0n-lens-ios";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E1616494275FC677005A8615 /* numer0n-analysis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "numer0n-analysis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1616494275FC677005A8615 /* Numer0n-lens-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Numer0n-lens-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1616497275FC677005A8615 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1616499275FC677005A8615 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E161649B275FC677005A8615 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,11 +44,11 @@
 		E16164A0275FC679005A8615 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E16164A3275FC679005A8615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E16164A5275FC679005A8615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E16164AA275FC679005A8615 /* numer0n-analysisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "numer0n-analysisTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E16164AE275FC679005A8615 /* numer0n_analysisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numer0n_analysisTests.swift; sourceTree = "<group>"; };
-		E16164B4275FC679005A8615 /* numer0n-analysisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "numer0n-analysisUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E16164B8275FC679005A8615 /* numer0n_analysisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numer0n_analysisUITests.swift; sourceTree = "<group>"; };
-		E16164BA275FC679005A8615 /* numer0n_analysisUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numer0n_analysisUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E16164AA275FC679005A8615 /* Numer0n-lens-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Numer0n-lens-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E16164AE275FC679005A8615 /* Numer0n_lens_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numer0n_lens_iosTests.swift; sourceTree = "<group>"; };
+		E16164B4275FC679005A8615 /* Numer0n-lens-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Numer0n-lens-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E16164B8275FC679005A8615 /* Numer0n_lens_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numer0n_lens_iosUITests.swift; sourceTree = "<group>"; };
+		E16164BA275FC679005A8615 /* Numer0n_lens_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numer0n_lens_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +79,9 @@
 		E161648B275FC677005A8615 = {
 			isa = PBXGroup;
 			children = (
-				E1616496275FC677005A8615 /* numer0n-analysis */,
-				E16164AD275FC679005A8615 /* numer0n-analysisTests */,
-				E16164B7275FC679005A8615 /* numer0n-analysisUITests */,
+				E1616496275FC677005A8615 /* Numer0n-lens-ios */,
+				E16164AD275FC679005A8615 /* Numer0n-lens-iosTests */,
+				E16164B7275FC679005A8615 /* Numer0n-lens-iosUITests */,
 				E1616495275FC677005A8615 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,14 +89,14 @@
 		E1616495275FC677005A8615 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E1616494275FC677005A8615 /* numer0n-analysis.app */,
-				E16164AA275FC679005A8615 /* numer0n-analysisTests.xctest */,
-				E16164B4275FC679005A8615 /* numer0n-analysisUITests.xctest */,
+				E1616494275FC677005A8615 /* Numer0n-lens-ios.app */,
+				E16164AA275FC679005A8615 /* Numer0n-lens-iosTests.xctest */,
+				E16164B4275FC679005A8615 /* Numer0n-lens-iosUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E1616496275FC677005A8615 /* numer0n-analysis */ = {
+		E1616496275FC677005A8615 /* Numer0n-lens-ios */ = {
 			isa = PBXGroup;
 			children = (
 				E1616497275FC677005A8615 /* AppDelegate.swift */,
@@ -107,32 +107,32 @@
 				E16164A2275FC679005A8615 /* LaunchScreen.storyboard */,
 				E16164A5275FC679005A8615 /* Info.plist */,
 			);
-			path = "numer0n-analysis";
+			path = "Numer0n-lens-ios";
 			sourceTree = "<group>";
 		};
-		E16164AD275FC679005A8615 /* numer0n-analysisTests */ = {
+		E16164AD275FC679005A8615 /* Numer0n-lens-iosTests */ = {
 			isa = PBXGroup;
 			children = (
-				E16164AE275FC679005A8615 /* numer0n_analysisTests.swift */,
+				E16164AE275FC679005A8615 /* Numer0n_lens_iosTests.swift */,
 			);
-			path = "numer0n-analysisTests";
+			path = "Numer0n-lens-iosTests";
 			sourceTree = "<group>";
 		};
-		E16164B7275FC679005A8615 /* numer0n-analysisUITests */ = {
+		E16164B7275FC679005A8615 /* Numer0n-lens-iosUITests */ = {
 			isa = PBXGroup;
 			children = (
-				E16164B8275FC679005A8615 /* numer0n_analysisUITests.swift */,
-				E16164BA275FC679005A8615 /* numer0n_analysisUITestsLaunchTests.swift */,
+				E16164B8275FC679005A8615 /* Numer0n_lens_iosUITests.swift */,
+				E16164BA275FC679005A8615 /* Numer0n_lens_iosUITestsLaunchTests.swift */,
 			);
-			path = "numer0n-analysisUITests";
+			path = "Numer0n-lens-iosUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E1616493275FC677005A8615 /* numer0n-analysis */ = {
+		E1616493275FC677005A8615 /* Numer0n-lens-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E16164BE275FC679005A8615 /* Build configuration list for PBXNativeTarget "numer0n-analysis" */;
+			buildConfigurationList = E16164BE275FC679005A8615 /* Build configuration list for PBXNativeTarget "Numer0n-lens-ios" */;
 			buildPhases = (
 				E1616490275FC677005A8615 /* Sources */,
 				E1616491275FC677005A8615 /* Frameworks */,
@@ -142,14 +142,14 @@
 			);
 			dependencies = (
 			);
-			name = "numer0n-analysis";
-			productName = "numer0n-analysis";
-			productReference = E1616494275FC677005A8615 /* numer0n-analysis.app */;
+			name = "Numer0n-lens-ios";
+			productName = "Numer0n-lens-ios";
+			productReference = E1616494275FC677005A8615 /* Numer0n-lens-ios.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E16164A9275FC679005A8615 /* numer0n-analysisTests */ = {
+		E16164A9275FC679005A8615 /* Numer0n-lens-iosTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E16164C1275FC679005A8615 /* Build configuration list for PBXNativeTarget "numer0n-analysisTests" */;
+			buildConfigurationList = E16164C1275FC679005A8615 /* Build configuration list for PBXNativeTarget "Numer0n-lens-iosTests" */;
 			buildPhases = (
 				E16164A6275FC679005A8615 /* Sources */,
 				E16164A7275FC679005A8615 /* Frameworks */,
@@ -160,14 +160,14 @@
 			dependencies = (
 				E16164AC275FC679005A8615 /* PBXTargetDependency */,
 			);
-			name = "numer0n-analysisTests";
-			productName = "numer0n-analysisTests";
-			productReference = E16164AA275FC679005A8615 /* numer0n-analysisTests.xctest */;
+			name = "Numer0n-lens-iosTests";
+			productName = "Numer0n-lens-iosTests";
+			productReference = E16164AA275FC679005A8615 /* Numer0n-lens-iosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E16164B3275FC679005A8615 /* numer0n-analysisUITests */ = {
+		E16164B3275FC679005A8615 /* Numer0n-lens-iosUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E16164C4275FC679005A8615 /* Build configuration list for PBXNativeTarget "numer0n-analysisUITests" */;
+			buildConfigurationList = E16164C4275FC679005A8615 /* Build configuration list for PBXNativeTarget "Numer0n-lens-iosUITests" */;
 			buildPhases = (
 				E16164B0275FC679005A8615 /* Sources */,
 				E16164B1275FC679005A8615 /* Frameworks */,
@@ -178,9 +178,9 @@
 			dependencies = (
 				E16164B6275FC679005A8615 /* PBXTargetDependency */,
 			);
-			name = "numer0n-analysisUITests";
-			productName = "numer0n-analysisUITests";
-			productReference = E16164B4275FC679005A8615 /* numer0n-analysisUITests.xctest */;
+			name = "Numer0n-lens-iosUITests";
+			productName = "Numer0n-lens-iosUITests";
+			productReference = E16164B4275FC679005A8615 /* Numer0n-lens-iosUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +206,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E161648F275FC677005A8615 /* Build configuration list for PBXProject "numer0n-analysis" */;
+			buildConfigurationList = E161648F275FC677005A8615 /* Build configuration list for PBXProject "Numer0n-lens-ios" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -219,9 +219,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E1616493275FC677005A8615 /* numer0n-analysis */,
-				E16164A9275FC679005A8615 /* numer0n-analysisTests */,
-				E16164B3275FC679005A8615 /* numer0n-analysisUITests */,
+				E1616493275FC677005A8615 /* Numer0n-lens-ios */,
+				E16164A9275FC679005A8615 /* Numer0n-lens-iosTests */,
+				E16164B3275FC679005A8615 /* Numer0n-lens-iosUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -268,7 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E16164AF275FC679005A8615 /* numer0n_analysisTests.swift in Sources */,
+				E16164AF275FC679005A8615 /* Numer0n_lens_iosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +276,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E16164BB275FC679005A8615 /* numer0n_analysisUITestsLaunchTests.swift in Sources */,
-				E16164B9275FC679005A8615 /* numer0n_analysisUITests.swift in Sources */,
+				E16164BB275FC679005A8615 /* Numer0n_lens_iosUITestsLaunchTests.swift in Sources */,
+				E16164B9275FC679005A8615 /* Numer0n_lens_iosUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,12 +286,12 @@
 /* Begin PBXTargetDependency section */
 		E16164AC275FC679005A8615 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E1616493275FC677005A8615 /* numer0n-analysis */;
+			target = E1616493275FC677005A8615 /* Numer0n-lens-ios */;
 			targetProxy = E16164AB275FC679005A8615 /* PBXContainerItemProxy */;
 		};
 		E16164B6275FC679005A8615 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E1616493275FC677005A8615 /* numer0n-analysis */;
+			target = E1616493275FC677005A8615 /* Numer0n-lens-ios */;
 			targetProxy = E16164B5275FC679005A8615 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -441,7 +441,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XU74X3434S;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "numer0n-analysis/Info.plist";
+				INFOPLIST_FILE = "Numer0n-lens-ios/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "numer0n-analysis";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -469,7 +470,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XU74X3434S;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "numer0n-analysis/Info.plist";
+				INFOPLIST_FILE = "Numer0n-lens-ios/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "numer0n-analysis";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -509,7 +511,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/numer0n-analysis.app/numer0n-analysis";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Numer0n-lens-ios.app/Numer0n-lens-ios";
 			};
 			name = Debug;
 		};
@@ -534,7 +536,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/numer0n-analysis.app/numer0n-analysis";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Numer0n-lens-ios.app/Numer0n-lens-ios";
 			};
 			name = Release;
 		};
@@ -557,7 +559,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "numer0n-analysis";
+				TEST_TARGET_NAME = "Numer0n-lens-ios";
 			};
 			name = Debug;
 		};
@@ -580,14 +582,14 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "numer0n-analysis";
+				TEST_TARGET_NAME = "Numer0n-lens-ios";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E161648F275FC677005A8615 /* Build configuration list for PBXProject "numer0n-analysis" */ = {
+		E161648F275FC677005A8615 /* Build configuration list for PBXProject "Numer0n-lens-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E16164BC275FC679005A8615 /* Debug */,
@@ -596,7 +598,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E16164BE275FC679005A8615 /* Build configuration list for PBXNativeTarget "numer0n-analysis" */ = {
+		E16164BE275FC679005A8615 /* Build configuration list for PBXNativeTarget "Numer0n-lens-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E16164BF275FC679005A8615 /* Debug */,
@@ -605,7 +607,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E16164C1275FC679005A8615 /* Build configuration list for PBXNativeTarget "numer0n-analysisTests" */ = {
+		E16164C1275FC679005A8615 /* Build configuration list for PBXNativeTarget "Numer0n-lens-iosTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E16164C2275FC679005A8615 /* Debug */,
@@ -614,7 +616,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E16164C4275FC679005A8615 /* Build configuration list for PBXNativeTarget "numer0n-analysisUITests" */ = {
+		E16164C4275FC679005A8615 /* Build configuration list for PBXNativeTarget "Numer0n-lens-iosUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E16164C5275FC679005A8615 /* Debug */,
