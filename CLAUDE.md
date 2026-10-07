@@ -10,7 +10,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 | デフォルトブランチ | `develop` |
 | 概要 | ヌメロン解析アプリ。選択と相手の回答から可能性のパターンを提示する（最善手の提示も予定） |
 | UI フレームワーク | UIKit（Storyboard） |
-| Deployment Target | iOS 15.0 |
+| Deployment Target | iOS 17.0 |
 | Bundle ID | `mrs1669.ml.numer0n-analysis` |
 
 ## 構成
