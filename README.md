@@ -95,7 +95,7 @@ xcodebuild test -project Numer0nLens.xcodeproj -scheme Numer0nLens -destination 
 | その他の作業ブランチ | ✅（Unit テストのみ） | | |
 | Pull Request の作成時（opened / reopened / ready_for_review） | ✅ | | |
 | Fork からの Pull Request | ✅ | | |
-| `assets/**`（PR 用スクリーンショット置き場） | | | |
+| `assets/**` ブランチへの push（PR 用スクリーンショット置き場。PR を作ったときは上の Pull Request の行のとおり） | | | |
 
 - Upload は Archive → IPA Export を含むため、`develop` / `release/**` では Archive を別途実行しません
 - Archive / Upload は Actions タブから手動でも実行できます（Run workflow）
