@@ -26,6 +26,8 @@
 		F0A1C0DE0000000000000031 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000032 /* History.swift */; };
 		F0A1C0DE0000000000000033 /* CandidateFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000034 /* CandidateFilter.swift */; };
 		F0A1C0DE0000000000000035 /* CandidateFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000036 /* CandidateFilterTests.swift */; };
+		F0A1C0DE0000000000000061 /* BestMoveSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000062 /* BestMoveSearch.swift */; };
+		F0A1C0DE0000000000000063 /* BestMoveSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000064 /* BestMoveSearchTests.swift */; };
 		F0A1C0DE0000000000000041 /* BestMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000042 /* BestMove.swift */; };
 		F0A1C0DE0000000000000043 /* BestMoveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000044 /* BestMoveTests.swift */; };
 /* End PBXBuildFile section */
@@ -70,6 +72,8 @@
 		F0A1C0DE0000000000000032 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		F0A1C0DE0000000000000034 /* CandidateFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateFilter.swift; sourceTree = "<group>"; };
 		F0A1C0DE0000000000000036 /* CandidateFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateFilterTests.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000062 /* BestMoveSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestMoveSearch.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000064 /* BestMoveSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestMoveSearchTests.swift; sourceTree = "<group>"; };
 		F0A1C0DE0000000000000042 /* BestMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestMove.swift; sourceTree = "<group>"; };
 		F0A1C0DE0000000000000044 /* BestMoveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestMoveTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +160,7 @@
 				F0A1C0DE0000000000000056 /* GameStateTests.swift */,
 				E16164AE275FC679005A8615 /* numer0n_analysisTests.swift */,
 				F0A1C0DE0000000000000044 /* BestMoveTests.swift */,
+				F0A1C0DE0000000000000064 /* BestMoveSearchTests.swift */,
 				F0A1C0DE0000000000000016 /* RuleTests.swift */,
 				F0A1C0DE0000000000000024 /* JudgeTests.swift */,
 				F0A1C0DE0000000000000036 /* CandidateFilterTests.swift */,
@@ -177,6 +182,7 @@
 			children = (
 				F0A1C0DE0000000000000012 /* Rule.swift */,
 				F0A1C0DE0000000000000042 /* BestMove.swift */,
+				F0A1C0DE0000000000000062 /* BestMoveSearch.swift */,
 				F0A1C0DE0000000000000014 /* Numer0nNumber.swift */,
 				F0A1C0DE0000000000000022 /* Judge.swift */,
 				F0A1C0DE0000000000000032 /* History.swift */,
@@ -322,6 +328,7 @@
 				F0A1C0DE0000000000000073 /* GameView.swift in Sources */,
 				F0A1C0DE0000000000000011 /* Rule.swift in Sources */,
 				F0A1C0DE0000000000000041 /* BestMove.swift in Sources */,
+				F0A1C0DE0000000000000061 /* BestMoveSearch.swift in Sources */,
 				F0A1C0DE0000000000000013 /* Numer0nNumber.swift in Sources */,
 				F0A1C0DE0000000000000021 /* Judge.swift in Sources */,
 				F0A1C0DE0000000000000031 /* History.swift in Sources */,
@@ -336,6 +343,7 @@
 				F0A1C0DE0000000000000055 /* GameStateTests.swift in Sources */,
 				E16164AF275FC679005A8615 /* numer0n_analysisTests.swift in Sources */,
 				F0A1C0DE0000000000000043 /* BestMoveTests.swift in Sources */,
+				F0A1C0DE0000000000000063 /* BestMoveSearchTests.swift in Sources */,
 				F0A1C0DE0000000000000015 /* RuleTests.swift in Sources */,
 				F0A1C0DE0000000000000023 /* JudgeTests.swift in Sources */,
 				F0A1C0DE0000000000000035 /* CandidateFilterTests.swift in Sources */,
