@@ -82,7 +82,8 @@ xcodebuild test -project Numer0nLens.xcodeproj -scheme Numer0nLens -destination 
 |---|---|
 | `DEVELOPMENT_TEAM` | Apple Developer Program の Team ID（`XU74X3434S`） |
 | `APP_BUNDLE_IDENTIFIER` | アプリ本体の Bundle Identifier（`jp.shilokuma.Numer0nLens`）。テストターゲットは `.Tests` / `.UITests` を付けて派生します |
-| `APP_DISPLAY_NAME` | ホーム画面に表示するアプリ名 |
+| `APP_DISPLAY_NAME` | ホーム画面に表示するアプリ名（`Numer0n Lens`） |
+| `APP_MODULE_NAME` | アプリ本体の Swift モジュール名（`Numer0nLens`）。テストは `@testable import Numer0nLens` で読み込みます |
 | `MARKETING_VERSION` | アプリのバージョン。ビルド番号（`CURRENT_PROJECT_VERSION`）は Upload のときに App Store Connect の最新ビルドを見て Xcode が自動で増やすため、手で上げる必要はありません |
 | `IPHONEOS_DEPLOYMENT_TARGET` | 最低サポート OS（17.0） |
 
