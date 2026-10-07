@@ -117,3 +117,82 @@ final class GameStateTests: XCTestCase {
         wait(for: [changed], timeout: 1)
     }
 }
+
+final class ContradictionAndUndoTests: XCTestCase {
+    private let three = Rule(digitCount: .three)
+
+    private func call(_ guess: String, _ eat: Int, _ bite: Int) throws -> HistoryEntry {
+        .call(guess: try Numer0nNumber(guess, rule: three), result: try EatBite(eat: eat, bite: bite, rule: three))
+    }
+
+    func testFirstContradictionIndex() throws {
+        XCTAssertNil(three.firstContradictionIndex(in: []))
+        XCTAssertNil(three.firstContradictionIndex(in: [try call("012", 0, 0), try call("345", 1, 0)]))
+        // 2 件目で矛盾する（123 が当たりなのに 456 に EAT がある）。3 件目以降は見ない
+        let history = [try call("123", 3, 0), try call("456", 1, 0), try call("789", 0, 0)]
+        XCTAssertEqual(three.firstContradictionIndex(in: history), 1)
+        // 1 件だけで矛盾することは無い（受け付ける回答はどれも候補が残る）
+        XCTAssertNil(three.firstContradictionIndex(in: [try call("012", 1, 2)]))
+    }
+
+    func testDeductionRecordsContradiction() throws {
+        let deduction = Deduction(rule: three)
+        deduction.add(try call("012", 0, 3))
+        XCTAssertNil(deduction.contradictionIndex)
+        deduction.add(try call("345", 1, 0))
+        XCTAssertEqual(deduction.candidateCount, 0)
+        XCTAssertEqual(deduction.contradictionIndex, 1)
+        // 0 件のまま足しても、最初の矛盾の位置は変わらない
+        deduction.add(try call("678", 0, 0))
+        XCTAssertEqual(deduction.contradictionIndex, 1)
+    }
+
+    func testUndoLastRestoresCandidates() throws {
+        let deduction = Deduction(rule: three)
+        deduction.add(try call("012", 0, 0))
+        let afterFirst = deduction.candidates
+        deduction.add(try call("345", 1, 1))
+        XCTAssertNotEqual(deduction.candidates, afterFirst)
+
+        deduction.undoLast()
+        XCTAssertEqual(deduction.history, [try call("012", 0, 0)])
+        XCTAssertEqual(deduction.candidates, afterFirst)
+
+        deduction.undoLast()
+        XCTAssertEqual(deduction.history, [])
+        XCTAssertEqual(deduction.candidateCount, 720)
+
+        // 履歴が無いときは何もしない
+        deduction.undoLast()
+        XCTAssertEqual(deduction.candidateCount, 720)
+    }
+
+    func testUndoClearsContradictionAndSolved() throws {
+        let deduction = Deduction(rule: three)
+        deduction.add(try call("012", 0, 3))
+        deduction.add(try call("345", 1, 0))
+        XCTAssertEqual(deduction.contradictionIndex, 1)
+        deduction.undoLast()
+        XCTAssertNil(deduction.contradictionIndex)
+        XCTAssertEqual(deduction.candidateCount, 2)
+
+        deduction.add(try call("120", 3, 0))
+        XCTAssertTrue(deduction.isSolved)
+        deduction.undoLast()
+        XCTAssertFalse(deduction.isSolved)
+        XCTAssertEqual(deduction.candidateCount, 2)
+    }
+
+    /// 矛盾の後にさらに足してから取り消しても、矛盾の位置は残りの履歴から求め直す。
+    func testUndoKeepsEarlierContradiction() throws {
+        let deduction = Deduction(rule: three)
+        deduction.add(try call("123", 3, 0))
+        deduction.add(try call("456", 1, 0))
+        deduction.add(try call("789", 0, 0))
+        deduction.undoLast()
+        XCTAssertEqual(deduction.contradictionIndex, 1)
+        deduction.undoLast()
+        XCTAssertNil(deduction.contradictionIndex)
+        XCTAssertEqual(deduction.candidateCount, 1)
+    }
+}
