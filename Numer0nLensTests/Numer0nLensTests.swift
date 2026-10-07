@@ -5,11 +5,10 @@
 //  Created by 村石拓海 on 2021/12/08.
 //
 
-import XCTest
 @testable import Numer0nLens
+import XCTest
 
 class Numer0nLensTests: XCTestCase {
-
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -29,5 +28,4 @@ class Numer0nLensTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
 }
