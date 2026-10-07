@@ -36,6 +36,10 @@ struct GameView: View {
             .pickerStyle(.segmented)
             .padding()
 
+            ProgressComparisonView(comparison: ProgressComparison(game: game))
+                .padding(.horizontal)
+                .padding(.bottom, 8)
+
             switch side {
             case .mine:
                 DeductionView(
