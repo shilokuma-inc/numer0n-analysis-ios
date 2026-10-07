@@ -42,6 +42,8 @@ struct DeductionView: View {
             }
 
             historySection
+
+            CandidatePreviewSection(candidates: deduction.candidates)
         }
     }
 
