@@ -35,9 +35,10 @@ struct ProgressComparisonView: View {
             Text(solved ? "当てた" : "残り \(remaining.formatted()) 通り")
                 .font(.title3.monospacedDigit())
             if !solved {
-                Text("あと約 \(bits.formatted(.number.precision(.fractionLength(1)))) bit")
+                // 候補 0 件（入力が矛盾）は情報量を出せないので、1 件（0 bit）と紛れないよう別の文言にする。
+                Text(remaining > 0 ? "あと約 \(bits.formatted(.number.precision(.fractionLength(1)))) bit" : "候補なし（入力が矛盾）")
                     .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(remaining > 0 ? AnyShapeStyle(.secondary) : AnyShapeStyle(.red))
             }
         }
         .frame(maxWidth: .infinity)
