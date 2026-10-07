@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F0A1C0DE00000000000000B1 /* ProgressComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE00000000000000B2 /* ProgressComparison.swift */; };
+		F0A1C0DE00000000000000B3 /* ProgressComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE00000000000000B4 /* ProgressComparisonView.swift */; };
+		F0A1C0DE00000000000000B5 /* ProgressComparisonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE00000000000000B6 /* ProgressComparisonTests.swift */; };
 		F0A1C0DE0000000000000051 /* Deduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000052 /* Deduction.swift */; };
 		F0A1C0DE0000000000000053 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000054 /* GameState.swift */; };
 		F0A1C0DE0000000000000055 /* GameStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000056 /* GameStateTests.swift */; };
@@ -55,6 +58,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F0A1C0DE00000000000000B2 /* ProgressComparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressComparison.swift; sourceTree = "<group>"; };
+		F0A1C0DE00000000000000B4 /* ProgressComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressComparisonView.swift; sourceTree = "<group>"; };
+		F0A1C0DE00000000000000B6 /* ProgressComparisonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressComparisonTests.swift; sourceTree = "<group>"; };
 		F0A1C0DE0000000000000052 /* Deduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deduction.swift; sourceTree = "<group>"; };
 		F0A1C0DE0000000000000054 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		F0A1C0DE0000000000000056 /* GameStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateTests.swift; sourceTree = "<group>"; };
@@ -117,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				F0A1C0DE0000000000000004 /* ContentView.swift */,
+				F0A1C0DE00000000000000B4 /* ProgressComparisonView.swift */,
 				F0A1C0DE0000000000000072 /* StartView.swift */,
 				F0A1C0DE0000000000000074 /* GameView.swift */,
 				F0A1C0DE0000000000000084 /* DeductionView.swift */,
@@ -129,6 +136,7 @@
 		F0A1C0DE0000000000000057 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F0A1C0DE00000000000000B2 /* ProgressComparison.swift */,
 				F0A1C0DE0000000000000052 /* Deduction.swift */,
 				F0A1C0DE0000000000000054 /* GameState.swift */,
 				F0A1C0DE0000000000000082 /* CallInput.swift */,
@@ -171,6 +179,7 @@
 		E16164AD275FC679005A8615 /* numer0n-analysisTests */ = {
 			isa = PBXGroup;
 			children = (
+				F0A1C0DE00000000000000B6 /* ProgressComparisonTests.swift */,
 				F0A1C0DE0000000000000056 /* GameStateTests.swift */,
 				F0A1C0DE0000000000000086 /* CallInputTests.swift */,
 				E16164AE275FC679005A8615 /* numer0n_analysisTests.swift */,
@@ -335,6 +344,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0A1C0DE00000000000000B1 /* ProgressComparison.swift in Sources */,
+				F0A1C0DE00000000000000B3 /* ProgressComparisonView.swift in Sources */,
 				F0A1C0DE0000000000000051 /* Deduction.swift in Sources */,
 				F0A1C0DE0000000000000053 /* GameState.swift in Sources */,
 				F0A1C0DE0000000000000001 /* Numer0nAnalysisApp.swift in Sources */,
@@ -359,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0A1C0DE00000000000000B5 /* ProgressComparisonTests.swift in Sources */,
 				F0A1C0DE0000000000000055 /* GameStateTests.swift in Sources */,
 				F0A1C0DE0000000000000085 /* CallInputTests.swift in Sources */,
 				E16164AF275FC679005A8615 /* numer0n_analysisTests.swift in Sources */,
