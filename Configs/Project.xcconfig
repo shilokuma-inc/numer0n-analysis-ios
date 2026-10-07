@@ -14,10 +14,13 @@ DEVELOPMENT_TEAM = XU74X3434S
 APP_BUNDLE_IDENTIFIER = jp.shilokuma.Numer0nLens
 
 // ホーム画面に表示するアプリ名（CFBundleDisplayName）
-APP_DISPLAY_NAME = numer0n-analysis
+APP_DISPLAY_NAME = Numer0n Lens
+
+// アプリ本体の Swift モジュール名（テストの @testable import で使う）
+APP_MODULE_NAME = Numer0nLens
 
 // バージョン（CFBundleShortVersionString / CFBundleVersion）
-MARKETING_VERSION = 1.0
+MARKETING_VERSION = 1.0.0
 CURRENT_PROJECT_VERSION = 1
 
 // 最低サポート OS
