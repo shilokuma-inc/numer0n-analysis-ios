@@ -9,14 +9,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 | リポジトリ | `shilokuma-inc/numer0n-analysis-ios`（public） |
 | デフォルトブランチ | `develop` |
 | 概要 | ヌメロン解析アプリ。選択と相手の回答から可能性のパターンを提示する（最善手の提示も予定） |
-| UI フレームワーク | UIKit（Storyboard） |
-| Deployment Target | iOS 15.0 |
+| UI フレームワーク | SwiftUI（`@Observable`） |
+| Deployment Target | iOS 17.0 |
 | Bundle ID | `mrs1669.ml.numer0n-analysis` |
 
 ## 構成
 
 - `numer0n-analysis/numer0n-analysis.xcodeproj` … Xcode プロジェクト（リポジトリ直下ではなく `numer0n-analysis/` の下にある）
-- `numer0n-analysis/numer0n-analysis/` … アプリ本体（`ViewController.swift`・`Main.storyboard` など）
+- `numer0n-analysis/numer0n-analysis/` … アプリ本体。`Logic/`（ルール・判定・候補の絞り込み・最善手。SwiftUI に依存しない）・`Model/`（`@Observable` の状態）・`Views/`（SwiftUI の画面）・`Numer0nAnalysisApp.swift`（`@main`）
 - `numer0n-analysis/numer0n-analysisTests/`・`numer0n-analysisUITests/` … テスト
 - 共有の scheme は無い（xcodebuild が自動で作る `numer0n-analysis` を使う）。CI（GitHub Actions）はまだ無い
 

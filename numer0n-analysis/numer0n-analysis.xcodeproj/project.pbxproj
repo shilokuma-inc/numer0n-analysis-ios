@@ -7,15 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E1616498275FC677005A8615 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1616497275FC677005A8615 /* AppDelegate.swift */; };
-		E161649A275FC677005A8615 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1616499275FC677005A8615 /* SceneDelegate.swift */; };
-		E161649C275FC677005A8615 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E161649B275FC677005A8615 /* ViewController.swift */; };
-		E161649F275FC677005A8615 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E161649D275FC677005A8615 /* Main.storyboard */; };
+		F0A1C0DE00000000000000B1 /* ProgressComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE00000000000000B2 /* ProgressComparison.swift */; };
+		F0A1C0DE00000000000000B3 /* ProgressComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE00000000000000B4 /* ProgressComparisonView.swift */; };
+		F0A1C0DE00000000000000B5 /* ProgressComparisonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE00000000000000B6 /* ProgressComparisonTests.swift */; };
+		F0A1C0DE0000000000000051 /* Deduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000052 /* Deduction.swift */; };
+		F0A1C0DE0000000000000053 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000054 /* GameState.swift */; };
+		F0A1C0DE0000000000000055 /* GameStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000056 /* GameStateTests.swift */; };
+		F0A1C0DE0000000000000001 /* Numer0nAnalysisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000002 /* Numer0nAnalysisApp.swift */; };
+		F0A1C0DE0000000000000071 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000072 /* StartView.swift */; };
+		F0A1C0DE0000000000000073 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000074 /* GameView.swift */; };
+		F0A1C0DE0000000000000003 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000004 /* ContentView.swift */; };
 		E16164A1275FC679005A8615 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E16164A0275FC679005A8615 /* Assets.xcassets */; };
-		E16164A4275FC679005A8615 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E16164A2275FC679005A8615 /* LaunchScreen.storyboard */; };
 		E16164AF275FC679005A8615 /* numer0n_analysisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16164AE275FC679005A8615 /* numer0n_analysisTests.swift */; };
 		E16164B9275FC679005A8615 /* numer0n_analysisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16164B8275FC679005A8615 /* numer0n_analysisUITests.swift */; };
 		E16164BB275FC679005A8615 /* numer0n_analysisUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16164BA275FC679005A8615 /* numer0n_analysisUITestsLaunchTests.swift */; };
+		F0A1C0DE0000000000000011 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000012 /* Rule.swift */; };
+		F0A1C0DE0000000000000013 /* Numer0nNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000014 /* Numer0nNumber.swift */; };
+		F0A1C0DE0000000000000015 /* RuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000016 /* RuleTests.swift */; };
+		F0A1C0DE0000000000000021 /* Judge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000022 /* Judge.swift */; };
+		F0A1C0DE0000000000000023 /* JudgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000024 /* JudgeTests.swift */; };
+		F0A1C0DE0000000000000031 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000032 /* History.swift */; };
+		F0A1C0DE0000000000000033 /* CandidateFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000034 /* CandidateFilter.swift */; };
+		F0A1C0DE0000000000000035 /* CandidateFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000036 /* CandidateFilterTests.swift */; };
+		F0A1C0DE0000000000000061 /* BestMoveSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000062 /* BestMoveSearch.swift */; };
+		F0A1C0DE0000000000000063 /* BestMoveSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000064 /* BestMoveSearchTests.swift */; };
+		F0A1C0DE0000000000000041 /* BestMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000042 /* BestMove.swift */; };
+		F0A1C0DE0000000000000043 /* BestMoveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000044 /* BestMoveTests.swift */; };
+		F0A1C0DE0000000000000081 /* CallInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000082 /* CallInput.swift */; };
+		F0A1C0DE0000000000000083 /* DeductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000084 /* DeductionView.swift */; };
+		F0A1C0DE0000000000000085 /* CallInputTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000086 /* CallInputTests.swift */; };
+		F0A1C0DE0000000000000091 /* CandidateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000092 /* CandidateListView.swift */; };
+		F0A1C0DE00000000000000A1 /* BestMoveSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE00000000000000A2 /* BestMoveSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,19 +58,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F0A1C0DE00000000000000B2 /* ProgressComparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressComparison.swift; sourceTree = "<group>"; };
+		F0A1C0DE00000000000000B4 /* ProgressComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressComparisonView.swift; sourceTree = "<group>"; };
+		F0A1C0DE00000000000000B6 /* ProgressComparisonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressComparisonTests.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000052 /* Deduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deduction.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000054 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000056 /* GameStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateTests.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000002 /* Numer0nAnalysisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numer0nAnalysisApp.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000072 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000074 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000004 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E1616494275FC677005A8615 /* numer0n-analysis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "numer0n-analysis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1616497275FC677005A8615 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E1616499275FC677005A8615 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E161649B275FC677005A8615 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E161649E275FC677005A8615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E16164A0275FC679005A8615 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E16164A3275FC679005A8615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E16164A5275FC679005A8615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E16164AA275FC679005A8615 /* numer0n-analysisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "numer0n-analysisTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E16164AE275FC679005A8615 /* numer0n_analysisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numer0n_analysisTests.swift; sourceTree = "<group>"; };
 		E16164B4275FC679005A8615 /* numer0n-analysisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "numer0n-analysisUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E16164B8275FC679005A8615 /* numer0n_analysisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numer0n_analysisUITests.swift; sourceTree = "<group>"; };
 		E16164BA275FC679005A8615 /* numer0n_analysisUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numer0n_analysisUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000012 /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000014 /* Numer0nNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numer0nNumber.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000016 /* RuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleTests.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000022 /* Judge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Judge.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000024 /* JudgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgeTests.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000032 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000034 /* CandidateFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateFilter.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000036 /* CandidateFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateFilterTests.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000062 /* BestMoveSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestMoveSearch.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000064 /* BestMoveSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestMoveSearchTests.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000042 /* BestMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestMove.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000044 /* BestMoveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestMoveTests.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000082 /* CallInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallInput.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000084 /* DeductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeductionView.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000086 /* CallInputTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallInputTests.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000092 /* CandidateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateListView.swift; sourceTree = "<group>"; };
+		F0A1C0DE00000000000000A2 /* BestMoveSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestMoveSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +119,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F0A1C0DE0000000000000075 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F0A1C0DE0000000000000004 /* ContentView.swift */,
+				F0A1C0DE00000000000000B4 /* ProgressComparisonView.swift */,
+				F0A1C0DE0000000000000072 /* StartView.swift */,
+				F0A1C0DE0000000000000074 /* GameView.swift */,
+				F0A1C0DE0000000000000084 /* DeductionView.swift */,
+				F0A1C0DE0000000000000092 /* CandidateListView.swift */,
+				F0A1C0DE00000000000000A2 /* BestMoveSection.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F0A1C0DE0000000000000057 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F0A1C0DE00000000000000B2 /* ProgressComparison.swift */,
+				F0A1C0DE0000000000000052 /* Deduction.swift */,
+				F0A1C0DE0000000000000054 /* GameState.swift */,
+				F0A1C0DE0000000000000082 /* CallInput.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E161648B275FC677005A8615 = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +167,11 @@
 		E1616496275FC677005A8615 /* numer0n-analysis */ = {
 			isa = PBXGroup;
 			children = (
-				E1616497275FC677005A8615 /* AppDelegate.swift */,
-				E1616499275FC677005A8615 /* SceneDelegate.swift */,
-				E161649B275FC677005A8615 /* ViewController.swift */,
-				E161649D275FC677005A8615 /* Main.storyboard */,
+				F0A1C0DE0000000000000017 /* Logic */,
+				F0A1C0DE0000000000000057 /* Model */,
+				F0A1C0DE0000000000000002 /* Numer0nAnalysisApp.swift */,
+				F0A1C0DE0000000000000075 /* Views */,
 				E16164A0275FC679005A8615 /* Assets.xcassets */,
-				E16164A2275FC679005A8615 /* LaunchScreen.storyboard */,
-				E16164A5275FC679005A8615 /* Info.plist */,
 			);
 			path = "numer0n-analysis";
 			sourceTree = "<group>";
@@ -113,7 +179,15 @@
 		E16164AD275FC679005A8615 /* numer0n-analysisTests */ = {
 			isa = PBXGroup;
 			children = (
+				F0A1C0DE00000000000000B6 /* ProgressComparisonTests.swift */,
+				F0A1C0DE0000000000000056 /* GameStateTests.swift */,
+				F0A1C0DE0000000000000086 /* CallInputTests.swift */,
 				E16164AE275FC679005A8615 /* numer0n_analysisTests.swift */,
+				F0A1C0DE0000000000000044 /* BestMoveTests.swift */,
+				F0A1C0DE0000000000000064 /* BestMoveSearchTests.swift */,
+				F0A1C0DE0000000000000016 /* RuleTests.swift */,
+				F0A1C0DE0000000000000024 /* JudgeTests.swift */,
+				F0A1C0DE0000000000000036 /* CandidateFilterTests.swift */,
 			);
 			path = "numer0n-analysisTests";
 			sourceTree = "<group>";
@@ -125,6 +199,20 @@
 				E16164BA275FC679005A8615 /* numer0n_analysisUITestsLaunchTests.swift */,
 			);
 			path = "numer0n-analysisUITests";
+			sourceTree = "<group>";
+		};
+		F0A1C0DE0000000000000017 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				F0A1C0DE0000000000000012 /* Rule.swift */,
+				F0A1C0DE0000000000000042 /* BestMove.swift */,
+				F0A1C0DE0000000000000062 /* BestMoveSearch.swift */,
+				F0A1C0DE0000000000000014 /* Numer0nNumber.swift */,
+				F0A1C0DE0000000000000022 /* Judge.swift */,
+				F0A1C0DE0000000000000032 /* History.swift */,
+				F0A1C0DE0000000000000034 /* CandidateFilter.swift */,
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E16164A4275FC679005A8615 /* LaunchScreen.storyboard in Resources */,
 				E16164A1275FC679005A8615 /* Assets.xcassets in Resources */,
-				E161649F275FC677005A8615 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +344,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E161649C275FC677005A8615 /* ViewController.swift in Sources */,
-				E1616498275FC677005A8615 /* AppDelegate.swift in Sources */,
-				E161649A275FC677005A8615 /* SceneDelegate.swift in Sources */,
+				F0A1C0DE00000000000000B1 /* ProgressComparison.swift in Sources */,
+				F0A1C0DE00000000000000B3 /* ProgressComparisonView.swift in Sources */,
+				F0A1C0DE0000000000000051 /* Deduction.swift in Sources */,
+				F0A1C0DE0000000000000053 /* GameState.swift in Sources */,
+				F0A1C0DE0000000000000001 /* Numer0nAnalysisApp.swift in Sources */,
+				F0A1C0DE0000000000000003 /* ContentView.swift in Sources */,
+				F0A1C0DE0000000000000071 /* StartView.swift in Sources */,
+				F0A1C0DE0000000000000073 /* GameView.swift in Sources */,
+				F0A1C0DE0000000000000081 /* CallInput.swift in Sources */,
+				F0A1C0DE0000000000000083 /* DeductionView.swift in Sources */,
+				F0A1C0DE0000000000000091 /* CandidateListView.swift in Sources */,
+				F0A1C0DE00000000000000A1 /* BestMoveSection.swift in Sources */,
+				F0A1C0DE0000000000000011 /* Rule.swift in Sources */,
+				F0A1C0DE0000000000000041 /* BestMove.swift in Sources */,
+				F0A1C0DE0000000000000061 /* BestMoveSearch.swift in Sources */,
+				F0A1C0DE0000000000000013 /* Numer0nNumber.swift in Sources */,
+				F0A1C0DE0000000000000021 /* Judge.swift in Sources */,
+				F0A1C0DE0000000000000031 /* History.swift in Sources */,
+				F0A1C0DE0000000000000033 /* CandidateFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +370,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0A1C0DE00000000000000B5 /* ProgressComparisonTests.swift in Sources */,
+				F0A1C0DE0000000000000055 /* GameStateTests.swift in Sources */,
+				F0A1C0DE0000000000000085 /* CallInputTests.swift in Sources */,
 				E16164AF275FC679005A8615 /* numer0n_analysisTests.swift in Sources */,
+				F0A1C0DE0000000000000043 /* BestMoveTests.swift in Sources */,
+				F0A1C0DE0000000000000063 /* BestMoveSearchTests.swift in Sources */,
+				F0A1C0DE0000000000000015 /* RuleTests.swift in Sources */,
+				F0A1C0DE0000000000000023 /* JudgeTests.swift in Sources */,
+				F0A1C0DE0000000000000035 /* CandidateFilterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,25 +405,6 @@
 			targetProxy = E16164B5275FC679005A8615 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		E161649D275FC677005A8615 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E161649E275FC677005A8615 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E16164A2275FC679005A8615 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E16164A3275FC679005A8615 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E16164BC275FC679005A8615 /* Debug */ = {
@@ -367,7 +458,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -422,7 +513,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -441,10 +532,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XU74X3434S;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "numer0n-analysis/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -469,10 +559,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XU74X3434S;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "numer0n-analysis/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -497,7 +586,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XU74X3434S;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -522,7 +611,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XU74X3434S;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
