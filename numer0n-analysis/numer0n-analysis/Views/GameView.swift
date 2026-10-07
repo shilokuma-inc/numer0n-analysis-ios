@@ -42,18 +42,12 @@ struct GameView: View {
 
             switch side {
             case .mine:
-                DeductionView(
-                    deduction: game.myDeduction,
-                    description: "自分のコールと相手の回答から、相手の数字の候補を出します。",
-                    inputTitle: "自分のコールと相手の回答"
-                )
-                // やり直したら入力欄も空に戻す。
-                .id(ObjectIdentifier(game.myDeduction))
+                DeductionView(deduction: game.myDeduction, role: .mine)
+                    // やり直したら入力欄も空に戻す。
+                    .id(ObjectIdentifier(game.myDeduction))
             case .opponent:
-                DeductionSummaryView(
-                    deduction: game.opponentDeduction,
-                    description: "相手のコールと自分の回答から、相手から見た自分の数字の候補を出します。"
-                )
+                DeductionView(deduction: game.opponentDeduction, role: .opponent)
+                    .id(ObjectIdentifier(game.opponentDeduction))
             }
         }
         .navigationTitle("\(game.digitCount.label)のゲーム")
@@ -74,23 +68,6 @@ struct GameView: View {
             Button("やり直す", role: .destructive) {
                 game.restart()
                 side = .mine
-            }
-        }
-    }
-}
-
-/// 推理の概要（候補の件数と履歴の件数）。入力・一覧は後続の画面で足す。
-struct DeductionSummaryView: View {
-    let deduction: Deduction
-    let description: String
-
-    var body: some View {
-        List {
-            Section {
-                LabeledContent("残り候補", value: "\(deduction.candidateCount.formatted()) 通り")
-                LabeledContent("履歴", value: "\(deduction.history.count) 件")
-            } footer: {
-                Text(description)
             }
         }
     }
