@@ -18,6 +18,9 @@
 		F0A1C0DE0000000000000015 /* RuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000016 /* RuleTests.swift */; };
 		F0A1C0DE0000000000000021 /* Judge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000022 /* Judge.swift */; };
 		F0A1C0DE0000000000000023 /* JudgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000024 /* JudgeTests.swift */; };
+		F0A1C0DE0000000000000031 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000032 /* History.swift */; };
+		F0A1C0DE0000000000000033 /* CandidateFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000034 /* CandidateFilter.swift */; };
+		F0A1C0DE0000000000000035 /* CandidateFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000036 /* CandidateFilterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,9 @@
 		F0A1C0DE0000000000000016 /* RuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleTests.swift; sourceTree = "<group>"; };
 		F0A1C0DE0000000000000022 /* Judge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Judge.swift; sourceTree = "<group>"; };
 		F0A1C0DE0000000000000024 /* JudgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgeTests.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000032 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000034 /* CandidateFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateFilter.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000036 /* CandidateFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateFilterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,7 @@
 				E16164AE275FC679005A8615 /* numer0n_analysisTests.swift */,
 				F0A1C0DE0000000000000016 /* RuleTests.swift */,
 				F0A1C0DE0000000000000024 /* JudgeTests.swift */,
+				F0A1C0DE0000000000000036 /* CandidateFilterTests.swift */,
 			);
 			path = "numer0n-analysisTests";
 			sourceTree = "<group>";
@@ -135,6 +142,8 @@
 				F0A1C0DE0000000000000012 /* Rule.swift */,
 				F0A1C0DE0000000000000014 /* Numer0nNumber.swift */,
 				F0A1C0DE0000000000000022 /* Judge.swift */,
+				F0A1C0DE0000000000000032 /* History.swift */,
+				F0A1C0DE0000000000000034 /* CandidateFilter.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -273,6 +282,8 @@
 				F0A1C0DE0000000000000011 /* Rule.swift in Sources */,
 				F0A1C0DE0000000000000013 /* Numer0nNumber.swift in Sources */,
 				F0A1C0DE0000000000000021 /* Judge.swift in Sources */,
+				F0A1C0DE0000000000000031 /* History.swift in Sources */,
+				F0A1C0DE0000000000000033 /* CandidateFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +294,7 @@
 				E16164AF275FC679005A8615 /* numer0n_analysisTests.swift in Sources */,
 				F0A1C0DE0000000000000015 /* RuleTests.swift in Sources */,
 				F0A1C0DE0000000000000023 /* JudgeTests.swift in Sources */,
+				F0A1C0DE0000000000000035 /* CandidateFilterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
