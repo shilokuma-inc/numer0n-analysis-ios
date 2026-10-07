@@ -148,7 +148,12 @@ final class BestMoveSearchTests: XCTestCase {
     }
 
     /// 計算時間の目安を出す（PR に記録するため。失敗はさせない）。
+    /// 全探索を含み重いので、通常のテストでは飛ばす。計測するときは
+    /// `TEST_RUNNER_RUN_BEST_MOVE_TIMINGS=1 xcodebuild test ...` のように環境変数を付けて実行する。
     func testReportTimings() throws {
+        guard ProcessInfo.processInfo.environment["RUN_BEST_MOVE_TIMINGS"] == "1" else {
+            throw XCTSkip("計測は RUN_BEST_MOVE_TIMINGS=1 のときだけ行う")
+        }
         for (rule, strategy) in [(four, BestMoveSearch.Strategy.exhaustive), (five, .sampled(.standard)), (five, .exhaustive)] {
             let candidates = candidatesAfterFirstCall(rule)
             let started = Date()
