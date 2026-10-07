@@ -28,6 +28,9 @@
 		F0A1C0DE0000000000000035 /* CandidateFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000036 /* CandidateFilterTests.swift */; };
 		F0A1C0DE0000000000000041 /* BestMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000042 /* BestMove.swift */; };
 		F0A1C0DE0000000000000043 /* BestMoveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000044 /* BestMoveTests.swift */; };
+		F0A1C0DE0000000000000081 /* CallInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000082 /* CallInput.swift */; };
+		F0A1C0DE0000000000000083 /* DeductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000084 /* DeductionView.swift */; };
+		F0A1C0DE0000000000000085 /* CallInputTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1C0DE0000000000000086 /* CallInputTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,9 @@
 		F0A1C0DE0000000000000036 /* CandidateFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateFilterTests.swift; sourceTree = "<group>"; };
 		F0A1C0DE0000000000000042 /* BestMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestMove.swift; sourceTree = "<group>"; };
 		F0A1C0DE0000000000000044 /* BestMoveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestMoveTests.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000082 /* CallInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallInput.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000084 /* DeductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeductionView.swift; sourceTree = "<group>"; };
+		F0A1C0DE0000000000000086 /* CallInputTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallInputTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 				F0A1C0DE0000000000000004 /* ContentView.swift */,
 				F0A1C0DE0000000000000072 /* StartView.swift */,
 				F0A1C0DE0000000000000074 /* GameView.swift */,
+				F0A1C0DE0000000000000084 /* DeductionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -114,6 +121,7 @@
 			children = (
 				F0A1C0DE0000000000000052 /* Deduction.swift */,
 				F0A1C0DE0000000000000054 /* GameState.swift */,
+				F0A1C0DE0000000000000082 /* CallInput.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				F0A1C0DE0000000000000056 /* GameStateTests.swift */,
+				F0A1C0DE0000000000000086 /* CallInputTests.swift */,
 				E16164AE275FC679005A8615 /* numer0n_analysisTests.swift */,
 				F0A1C0DE0000000000000044 /* BestMoveTests.swift */,
 				F0A1C0DE0000000000000016 /* RuleTests.swift */,
@@ -320,6 +329,8 @@
 				F0A1C0DE0000000000000003 /* ContentView.swift in Sources */,
 				F0A1C0DE0000000000000071 /* StartView.swift in Sources */,
 				F0A1C0DE0000000000000073 /* GameView.swift in Sources */,
+				F0A1C0DE0000000000000081 /* CallInput.swift in Sources */,
+				F0A1C0DE0000000000000083 /* DeductionView.swift in Sources */,
 				F0A1C0DE0000000000000011 /* Rule.swift in Sources */,
 				F0A1C0DE0000000000000041 /* BestMove.swift in Sources */,
 				F0A1C0DE0000000000000013 /* Numer0nNumber.swift in Sources */,
@@ -334,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0A1C0DE0000000000000055 /* GameStateTests.swift in Sources */,
+				F0A1C0DE0000000000000085 /* CallInputTests.swift in Sources */,
 				E16164AF275FC679005A8615 /* numer0n_analysisTests.swift in Sources */,
 				F0A1C0DE0000000000000043 /* BestMoveTests.swift in Sources */,
 				F0A1C0DE0000000000000015 /* RuleTests.swift in Sources */,
