@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E1616493275FC677005A8615"
-               BuildableName = "Numer0n-lens-ios.app"
-               BlueprintName = "Numer0n-lens-ios"
-               ReferencedContainer = "container:Numer0n-lens-ios.xcodeproj">
+               BuildableName = "Numer0nLens.app"
+               BlueprintName = "Numer0nLens"
+               ReferencedContainer = "container:Numer0nLens.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -36,9 +36,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E16164A9275FC679005A8615"
-               BuildableName = "Numer0n-lens-iosTests.xctest"
-               BlueprintName = "Numer0n-lens-iosTests"
-               ReferencedContainer = "container:Numer0n-lens-ios.xcodeproj">
+               BuildableName = "Numer0nLensTests.xctest"
+               BlueprintName = "Numer0nLensTests"
+               ReferencedContainer = "container:Numer0nLens.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -46,9 +46,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E16164B3275FC679005A8615"
-               BuildableName = "Numer0n-lens-iosUITests.xctest"
-               BlueprintName = "Numer0n-lens-iosUITests"
-               ReferencedContainer = "container:Numer0n-lens-ios.xcodeproj">
+               BuildableName = "Numer0nLensUITests.xctest"
+               BlueprintName = "Numer0nLensUITests"
+               ReferencedContainer = "container:Numer0nLens.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -68,9 +68,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E1616493275FC677005A8615"
-            BuildableName = "Numer0n-lens-ios.app"
-            BlueprintName = "Numer0n-lens-ios"
-            ReferencedContainer = "container:Numer0n-lens-ios.xcodeproj">
+            BuildableName = "Numer0nLens.app"
+            BlueprintName = "Numer0nLens"
+            ReferencedContainer = "container:Numer0nLens.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E1616493275FC677005A8615"
-            BuildableName = "Numer0n-lens-ios.app"
-            BlueprintName = "Numer0n-lens-ios"
-            ReferencedContainer = "container:Numer0n-lens-ios.xcodeproj">
+            BuildableName = "Numer0nLens.app"
+            BlueprintName = "Numer0nLens"
+            ReferencedContainer = "container:Numer0nLens.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

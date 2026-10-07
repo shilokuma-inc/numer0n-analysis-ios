@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Numer0n-lens-ios
+//  Numer0nLens
 //
 //  Created by 村石拓海 on 2021/12/08.
 //
