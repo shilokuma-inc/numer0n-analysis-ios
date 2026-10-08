@@ -77,3 +77,12 @@ xcodebuild test -project Numer0nLens.xcodeproj -scheme Numer0nLens -destination 
 ```
 <リポジトリ> で epic/<機能名> のループを回したい。ゴールは Discussion #N
 ```
+
+担当者が自分の Mac の Claude Code で手動ループを回すとき（AskHub で「手動で回す」を選び、担当者に指定されたとき）は、AskHub からコピーした次の指示を受ける。
+手順は `.claude/ralph/README.md` の「手で回す（manual-loop）」にあり、**`scripts/askhub-manual.sh`（start → launch → status → resume → final）で行う**:
+
+```
+<リポジトリ> で Discussion #N の epic を手動ループで回して（scripts/askhub-manual.sh を使う）
+<リポジトリ> の Discussion #N の手動ループを再開して（scripts/askhub-manual.sh resume）
+<リポジトリ> の Discussion #N の手動ループの最終 PR を作って（scripts/askhub-manual.sh final）
+```
