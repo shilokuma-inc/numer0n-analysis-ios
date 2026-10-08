@@ -159,6 +159,9 @@ check_deny() {
   local settings="$1" mode="${2:-add}"
   command -v jq >/dev/null 2>&1 \
     || { echo "エラー: jq が必要です（$settings の deny の検査に使います）" >&2; exit 1; }
+  # 空のファイルや JSON のオブジェクトでないものは、足すときに中身ごと置き換えてしまうので、先に止める
+  jq -e 'type == "object"' "$settings" >/dev/null 2>&1 \
+    || { echo "エラー: $settings を JSON のオブジェクトとして読めません" >&2; exit 1; }
   local missing
   missing=$(jq -r --slurpfile have "$settings" \
     '.permissions.deny - ($have[0].permissions.deny // []) | .[]' \
@@ -170,7 +173,8 @@ check_deny() {
     merged=$(mktemp "$settings.XXXXXX")
     if jq --slurpfile template .claude/ralph/settings.deny.example.json \
       '.permissions.deny = ((.permissions.deny // []) + ($template[0].permissions.deny - (.permissions.deny // [])))' \
-      "$settings" > "$merged"; then
+      "$settings" > "$merged" \
+      && jq -e '.permissions.deny | type == "array" and length > 0' "$merged" >/dev/null; then
       mv "$merged" "$settings"
     else
       rm -f "$merged"
