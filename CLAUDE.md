@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 | 項目 | 値 |
 | --- | --- |
-| リポジトリ | `shilokuma-inc/numer0n-analysis-ios`（public） |
+| リポジトリ | `shilokuma-inc/numer0n-lens-ios`（public） |
 | デフォルトブランチ | `develop` |
 | 概要 | ヌメロン解析アプリ。選択と相手の回答から可能性のパターンを提示する（最善手の提示も予定） |
 | UI フレームワーク | SwiftUI（`@Observable`） |

@@ -1,5 +1,5 @@
 # リポジトリ名
-numer0n-analysis-ios
+numer0n-lens-ios
 
 ## 概要
 ヌメロン解析アプリ
@@ -33,13 +33,13 @@ numer0n-analysis-ios
       <tr>
         <td style="border:2px double #000080;text-align:left;">main</td>
         <td style="border:2px double #000080;text-align:center;">
-          <a href="https://github.com/shilokuma-inc/numer0n-analysis-ios/actions/workflows/build.yml?query=branch%3Amain">
-            <img src="https://github.com/shilokuma-inc/numer0n-analysis-ios/actions/workflows/build.yml/badge.svg?branch=main" alt="Build">
+          <a href="https://github.com/shilokuma-inc/numer0n-lens-ios/actions/workflows/build.yml?query=branch%3Amain">
+            <img src="https://github.com/shilokuma-inc/numer0n-lens-ios/actions/workflows/build.yml/badge.svg?branch=main" alt="Build">
           </a>
         </td>
         <td style="border:2px double #000080;text-align:center;">
-          <a href="https://github.com/shilokuma-inc/numer0n-analysis-ios/actions/workflows/archive.yml?query=branch%3Amain">
-            <img src="https://github.com/shilokuma-inc/numer0n-analysis-ios/actions/workflows/archive.yml/badge.svg?branch=main" alt="Archive">
+          <a href="https://github.com/shilokuma-inc/numer0n-lens-ios/actions/workflows/archive.yml?query=branch%3Amain">
+            <img src="https://github.com/shilokuma-inc/numer0n-lens-ios/actions/workflows/archive.yml/badge.svg?branch=main" alt="Archive">
           </a>
         </td>
         <td style="border:2px double #000080;text-align:center;">
@@ -48,15 +48,15 @@ numer0n-analysis-ios
       <tr>
         <td style="border:2px double #000080;text-align:left;">develop</td>
         <td style="border:2px double #000080;text-align:center;">
-          <a href="https://github.com/shilokuma-inc/numer0n-analysis-ios/actions/workflows/build.yml?query=branch%3Adevelop">
-            <img src="https://github.com/shilokuma-inc/numer0n-analysis-ios/actions/workflows/build.yml/badge.svg?branch=develop" alt="Build">
+          <a href="https://github.com/shilokuma-inc/numer0n-lens-ios/actions/workflows/build.yml?query=branch%3Adevelop">
+            <img src="https://github.com/shilokuma-inc/numer0n-lens-ios/actions/workflows/build.yml/badge.svg?branch=develop" alt="Build">
           </a>
         </td>
         <td style="border:2px double #000080;text-align:center;">
         </td>
         <td style="border:2px double #000080;text-align:center;">
-          <a href="https://github.com/shilokuma-inc/numer0n-analysis-ios/actions/workflows/upload.yml?query=branch%3Adevelop">
-            <img src="https://github.com/shilokuma-inc/numer0n-analysis-ios/actions/workflows/upload.yml/badge.svg?branch=develop" alt="Upload">
+          <a href="https://github.com/shilokuma-inc/numer0n-lens-ios/actions/workflows/upload.yml?query=branch%3Adevelop">
+            <img src="https://github.com/shilokuma-inc/numer0n-lens-ios/actions/workflows/upload.yml/badge.svg?branch=develop" alt="Upload">
           </a>
         </td>
       </tr>
