@@ -152,10 +152,11 @@ fi
   || cp .claude/ralph/goal.template.md "$CTL/.claude/ralph-goal.local.md"
 [[ -f "$CTL/.claude/ralph-state.local.md" ]] \
   || cp .claude/ralph/state.template.md "$CTL/.claude/ralph-state.local.md"
-# 既存の settings.json にテンプレートの deny が欠けていたら止める。
-# bypassPermissions で動くループにとって、deny は禁止操作を止める最初の層だから
+# 既存の settings.json にテンプレートの deny が欠けていたら足す（git 管理下の settings.json なら止める）。
+# bypassPermissions で動くループにとって、deny は禁止操作を止める最初の層だから。
+# テンプレートに deny を足したとき、前から使っている制御用 worktree の再開を止めずに行き渡らせる
 check_deny() {
-  local settings="$1"
+  local settings="$1" mode="${2:-add}"
   command -v jq >/dev/null 2>&1 \
     || { echo "エラー: jq が必要です（$settings の deny の検査に使います）" >&2; exit 1; }
   local missing
@@ -163,20 +164,35 @@ check_deny() {
     '.permissions.deny - ($have[0].permissions.deny // []) | .[]' \
     .claude/ralph/settings.deny.example.json) \
     || { echo "エラー: $settings を JSON として読めません" >&2; exit 1; }
-  if [[ -n "$missing" ]]; then
-    echo "エラー: $settings に次の deny がありません。統合してから再実行してください:" >&2
-    echo "$missing" | sed 's/^/      /' >&2
-    exit 1
+  [[ -n "$missing" ]] || return 0
+  if [[ "$mode" == add ]]; then
+    local merged
+    merged=$(mktemp "$settings.XXXXXX")
+    if jq --slurpfile template .claude/ralph/settings.deny.example.json \
+      '.permissions.deny = ((.permissions.deny // []) + ($template[0].permissions.deny - (.permissions.deny // [])))' \
+      "$settings" > "$merged"; then
+      mv "$merged" "$settings"
+    else
+      rm -f "$merged"
+      echo "エラー: $settings に deny を足せませんでした" >&2
+      exit 1
+    fi
+    echo "$settings に、テンプレートの deny を足しました:"
+    echo "$missing" | sed 's/^/      /'
+    return 0
   fi
+  echo "エラー: $settings に次の deny がありません。統合してから再実行してください:" >&2
+  echo "$missing" | sed 's/^/      /' >&2
+  exit 1
 }
 
 # deny リストは制御用 worktree にだけ置く。リポジトリにコミットすると
 # gh pr create --base <base> の deny が通常開発の PR 作成まで塞いでしまう。
 if git ls-files --error-unmatch .claude/settings.json >/dev/null 2>&1; then
   echo "警告: .claude/settings.json が git 管理下にあります。deny リストは手で統合してください" >&2
-  # git 管理下でも、制御用 worktree で効く設定に deny が揃っていなければ止める
+  # git 管理下でも、制御用 worktree で効く設定に deny が揃っていなければ止める（git 管理下のファイルは書き換えない）
   if [[ -f "$CTL/.claude/settings.json" ]]; then
-    check_deny "$CTL/.claude/settings.json"
+    check_deny "$CTL/.claude/settings.json" stop
   else
     echo "エラー: $CTL/.claude/settings.json がありません。deny リストを統合してから再実行してください" >&2
     exit 1
