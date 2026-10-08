@@ -175,7 +175,8 @@ check_deny() {
       '.permissions.deny = ((.permissions.deny // []) + ($template[0].permissions.deny - (.permissions.deny // [])))' \
       "$settings" > "$merged" \
       && jq -e '.permissions.deny | type == "array" and length > 0' "$merged" >/dev/null; then
-      mv "$merged" "$settings"
+      mv "$merged" "$settings" \
+        || { rm -f "$merged"; echo "エラー: $settings を置き換えられませんでした" >&2; exit 1; }
     else
       rm -f "$merged"
       echo "エラー: $settings に deny を足せませんでした" >&2
