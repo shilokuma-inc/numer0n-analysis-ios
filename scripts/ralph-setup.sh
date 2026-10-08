@@ -159,8 +159,8 @@ check_deny() {
   local settings="$1" mode="${2:-add}"
   command -v jq >/dev/null 2>&1 \
     || { echo "エラー: jq が必要です（$settings の deny の検査に使います）" >&2; exit 1; }
-  # 空のファイルや JSON のオブジェクトでないものは、足すときに中身ごと置き換えてしまうので、先に止める
-  jq -e 'type == "object"' "$settings" >/dev/null 2>&1 \
+  # 空のファイル・JSON のオブジェクトでないもの・値が 2 つ以上続くものは、足すときに中身ごと置き換えてしまうので、先に止める
+  jq -s -e 'length == 1 and (.[0] | type == "object")' "$settings" >/dev/null 2>&1 \
     || { echo "エラー: $settings を JSON のオブジェクトとして読めません" >&2; exit 1; }
   local missing
   missing=$(jq -r --slurpfile have "$settings" \
