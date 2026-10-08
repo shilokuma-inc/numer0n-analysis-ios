@@ -203,7 +203,13 @@ if git ls-files --error-unmatch .claude/settings.json >/dev/null 2>&1; then
   fi
 else
   if [[ -f "$CTL/.claude/settings.json" ]]; then
-    check_deny "$CTL/.claude/settings.json"
+    # 実行元で git 管理外でも、制御用 worktree のブランチ（統合ブランチ）では git 管理下のことがある。
+    # そのときは書き換えると統合ブランチに載ってしまうので、止めて手で統合してもらう
+    if git -C "$CTL" ls-files --error-unmatch .claude/settings.json >/dev/null 2>&1; then
+      check_deny "$CTL/.claude/settings.json" stop
+    else
+      check_deny "$CTL/.claude/settings.json"
+    fi
   else
     cp .claude/ralph/settings.deny.example.json "$CTL/.claude/settings.json"
   fi
