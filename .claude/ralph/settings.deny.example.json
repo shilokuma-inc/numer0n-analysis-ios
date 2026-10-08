@@ -1,6 +1,6 @@
 {
   "_comment": "制御用 worktree の `.claude/settings.json` にコピーして使う（ralph-setup.sh が配置する）。リポジトリにはコミットしないこと: gh pr create --base develop の deny が通常開発の PR 作成まで塞ぐため。bypassPermissions 下でも deny は常に優先される。テンプレートの deny は消さないこと（ralph-setup.sh が、既存の settings.json に欠けている deny を足す。使っていないブランチの deny が残っていても害は無い）。プロジェクト固有の保護ブランチがあれば、その deny を追加すること。",
-  "_warning": "この deny リストはコマンドの書き方に対するパターンでしかなく、保護ブランチへの push や PR の作成を塞ぎきれない。gh pr create（別名の gh pr new を含む）は、--base・--base=・-B・-B=・-B<ブランチ名> の位置に関わらず止めるが、git push origin HEAD:develop のような書き方・bash -c やフルパスでの実行・未知の書式は素通りする。保護ブランチの保護は GitHub 側のブランチ保護で行うこと。ここにあるのは多層防御の一段目にすぎない。",
+  "_warning": "この deny リストはコマンドの書き方に対するパターンでしかなく、保護ブランチへの push や PR の作成を塞ぎきれない。gh pr create（別名の gh pr new を含む）は、--base・--base=・-B・-B=・-B<ブランチ名> の位置に関わらず止めるが、git -C . push origin HEAD:develop のような書き方（前方一致の deny に当たらない）・bash -c やフルパスでの実行・未知の書式は素通りする。保護ブランチの保護は GitHub 側のブランチ保護で行うこと。ここにあるのは多層防御の一段目にすぎない。",
   "permissions": {
     "deny": [
       "Bash(git push origin develop:*)",
