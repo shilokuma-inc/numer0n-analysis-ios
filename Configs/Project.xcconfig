@@ -25,3 +25,10 @@ CURRENT_PROJECT_VERSION = 1
 
 // 最低サポート OS
 IPHONEOS_DEPLOYMENT_TARGET = 17.0
+
+// 輸出コンプライアンスの申告（Info.plist の ITSAppUsesNonExemptEncryption）。
+// NO は「免除対象外の暗号を使わない」という申告で、これがあると App Store Connect が
+// ビルドごとに暗号化の質問を出さず、TestFlight の配信が止まらない。
+// HTTPS など OS 標準の暗号だけを使うなら通常は NO のままでよい。
+// 独自の暗号や標準外のアルゴリズムを入れるときは見直すこと
+INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO
