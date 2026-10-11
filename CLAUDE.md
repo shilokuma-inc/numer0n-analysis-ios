@@ -45,7 +45,7 @@ xcodebuild test -project Numer0nLens.xcodeproj -scheme Numer0nLens -destination 
 | Upload（`upload.yml` → `_archive.yml`） | `develop` / `release/**` への push・手動 | Archive → IPA Export → App Store Connect（TestFlight） |
 | Close goal Discussion（`close-goal-discussion.yml`） | `epic-final` 付きの PR が `develop` にマージされたとき | ゴール元の Discussion を解決済みで閉じる |
 
-- Xcode は CI で 26.3 に固定（`_build.yml` / `_archive.yml` の `xcode-version`）。ローカルの Xcode が新しいと、ローカルで通っても CI で落ちることがある
+- Xcode は CI で 26.6 に固定（`_build.yml` / `_archive.yml` の `xcode-version`）。ローカルの Xcode が新しいと、ローカルで通っても CI で落ちることがある
 - ドキュメントだけの変更（`**/*.md`・`docs/**`）では Build は走らない。`epic/**` 宛ての PR では PR イベントの Build は走らず、ブランチへの push で走る
 - Archive / Upload を動かすには、人がリポジトリの外で設定する必要がある（ループやエージェントからは触れない）:
   - リポジトリ変数 `ENABLE_DELIVERY=false`（App Store Connect にアプリを作るまで Upload を止める）

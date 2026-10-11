@@ -14,7 +14,7 @@ numer0n-lens-ios
 
 ## Environment
 
-- Xcode 26.3（CI で固定）
+- Xcode 26.6（CI で固定）
 - iOS 17.0 以上
 - SwiftUI（Observation）/ XCTest
 - SwiftLint 0.65.1（Build Tool Plugin。バイナリだけを配布する [SwiftLintPlugins](https://github.com/SimplyDanny/SwiftLintPlugins) 経由）
